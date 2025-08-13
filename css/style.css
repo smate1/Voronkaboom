@@ -666,6 +666,7 @@ body {
 	display: flex;
 	align-items: center;
 	padding: 10px 16px;
+	white-space: nowrap;
 	gap: 30px;
 	flex: 1;
 	justify-content: space-between;
@@ -1215,7 +1216,14 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1075px) {
+	.info__items{
+		padding: 0 15px;
+		gap: 15px;
+	}
+	.manage{
+		padding: 18px 15px;
+	}
 	.chart-section {
 		margin: 15px;
 		padding: 16px;
@@ -2759,30 +2767,29 @@ body.modal-open {
 
 }
 
+/* ========================= */
+/* МОБІЛЬНА АДАПТАЦІЯ САЙДБАРУ */
+/* ========================= */
 
-/* =================================== */
-/* МОБІЛЬНА АДАПТИВНІСТЬ - VORONKABOOM */
-/* =================================== */
-
-/* Бургер меню кнопка (приховано за замовчуванням) */
+/* Кнопка бургер меню */
 .sidebar__toggle {
   display: none;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1001;
+  align-items: center;
+  justify-content: center;
   background: #0180fe;
+  color: white;
   border: none;
   border-radius: 8px;
-  padding: 12px;
-  color: white;
+  padding: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(1, 128, 254, 0.3);
   transition: all 0.3s ease;
+  margin-right: 15px;
+  flex-shrink: 0;
 }
 
 .sidebar__toggle:hover {
-  background: #096fce;
+  background: #0066cc;
   transform: scale(1.05);
 }
 
@@ -2791,71 +2798,93 @@ body.modal-open {
   height: 20px;
 }
 
-/* Overlay для мобільного меню */
+/* Overlay для закриття меню */
 .sidebar__overlay {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .sidebar__overlay.active {
   opacity: 1;
+  visibility: visible;
 }
 
-/* Медіа-запити для планшетів (768px - 1024px) */
+/* Запобігання скролу при відкритому меню */
+body.mobile-menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* ========================= */
+/* ПЛАНШЕТИ (1075px - 1024px) */
+/* ========================= */
 @media screen and (max-width: 1024px) {
   .sidebar {
-    width: 220px;
+    width: 200px;
   }
 
   .main-content {
-    padding-left: 220px;
+    padding-left: 200px;
   }
 
   .header {
-    padding: 12px 30px 8px 25px;
+    padding: 0 25px 10px 25px;
   }
 
-  .info__items {
-    gap: 20px;
-    padding: 0 25px;
+  .sidebar__nav {
+    margin: 40px 20px;
   }
 
-  .chart-section {
-    margin: 20px;
-  }
-
-  .manage {
-    padding: 15px 25px;
+  .sidebar__bottom {
+    padding: 15px 20px 0 20px;
   }
 }
 
-/* Медіа-запити для мобільних пристроїв (до 768px) */
-@media screen and (max-width: 768px) {
-  /* Показати кнопку меню */
+/* ========================= */
+/* МОБІЛЬНІ ПРИСТРОЇ (до 1075px) */
+/* ========================= */
+@media screen and (max-width: 1075px) {
+  /* Показуємо кнопку бургер меню */
   .sidebar__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Показуємо overlay */
+  .sidebar__overlay {
     display: block;
   }
 
-  /* Сховати сайдбар за замовчуванням */
+  /* Сайдбар на мобільних */
   .sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    width: 280px;
+    position: fixed;
+    top: 0;
+    left: -240px; /* Ховаємо за екраном */
+    width: 240px;
+    height: 100vh;
+    transition: left 0.3s ease;
     z-index: 1000;
   }
 
-  /* Показати сайдбар коли активний */
   .sidebar.active {
-    transform: translateX(0);
+    left: 0; /* Показуємо при активації */
   }
+	.sidebar__nav .sidebar__item:nth-child(3) .sidebar__link::before,
+	.sidebar__nav .sidebar__item:nth-child(2) .sidebar__link::before {
+		display: none;
+	}
 
   /* Основний контент займає всю ширину */
   .main-content {
@@ -2863,438 +2892,485 @@ body.modal-open {
     width: 100%;
   }
 
-  /* Хедер адаптивний */
+  /* Хедер адаптація */
   .header {
-    padding: 60px 20px 15px 20px;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 0 15px 10px 15px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
     gap: 15px;
-    border-radius: 0;
   }
 
   .header__left {
-    width: 100%;
-  }
-
-  .header__greetings {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .header__description {
-    font-size: 14px;
+    flex: 1;
   }
 
   .header__right {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-shrink: 0;
   }
 
-  /* Мобільна адаптація user profile */
-  .user__profile {
-    order: -1;
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .user__info {
-    max-width: none;
-  }
-
-  /* Мобільна адаптація language selector */
-  .language-selector {
-    margin-left: 0;
-  }
-
-  /* Управління */
-  .manage {
-    padding: 15px 20px;
-  }
-
-  .manage__inner {
-    flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
-  }
-
-  .manage__content,
-  .manage__channel {
-    min-width: auto;
-    width: 100%;
-    font-size: 14px;
-    padding: 12px 16px;
-    height: auto;
-  }
-
-  .manage__trial {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 15px;
-  }
-
-  .manage__trial-left {
-    gap: 10px;
-  }
-
-  .manage__trial-left p {
-    font-size: 14px;
-  }
-
-  .manage__calendar {
-    width: 100%;
-  }
-
-  .calendar-display {
-    padding: 12px 20px 12px 15px;
-  }
-
-  .calendar-date-text {
-    font-size: 13px;
-  }
-
-  /* Календар адаптивний */
-  .calendar-wrapper {
-    width: 95vw;
-    max-width: 350px;
-    right: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Інформаційні елементи */
-  .info__items {
-    flex-direction: column;
-    padding: 0 20px;
-    gap: 15px;
-  }
-
-  .info__item {
-    padding: 15px;
-  }
-
-  .info__item-header h3 {
-    font-size: 13px;
-  }
-
-  .info__num {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .info__description-text {
-    font-size: 11px;
-  }
-
-  /* Графік адаптивний */
-  .chart-section {
-    margin: 15px 20px;
-    padding: 20px 15px;
-  }
-
-  .chart-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .chart-title {
-    font-size: 18px;
-  }
-
-  .chart-container {
-    height: 250px;
-  }
-
-  .chart-legend {
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .legend-text {
-    font-size: 14px;
-  }
-
-  /* Курси адаптивні */
-  .courses {
-    padding: 0 20px;
-  }
-
-  .courses__items {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .courses__item {
-    padding: 15px;
-    min-width: auto;
-  }
-
-  .courses__title {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  /* Модальні вікна адаптивні */
-  .modal-content {
-    width: 95%;
-    max-width: 500px;
-    margin: 0 auto;
-    max-height: 85vh;
-    overflow-y: auto;
-  }
-
-  .modal-header {
-    padding: 20px 20px 0;
-  }
-
-  .modal-title {
-    font-size: 16px;
-  }
-
-  .modal-body {
-    padding: 30px 20px 40px;
-  }
-
-  .modal-footer {
-    padding: 20px 20px 40px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn-cancel,
-  .btn-next,
-  .btn-create-content {
-    width: 100%;
-    padding: 12px 20px;
-  }
-
-  /* Тарифні кнопки адаптивні */
-  .payment-buttons {
-    width: 100%;
-    flex-direction: column;
-    border-radius: 12px;
-  }
-
-  .payment-btn {
-    border-radius: 12px !important;
-    margin-bottom: 8px;
-    border: 1px solid #e2e8f0;
-  }
-
-  .payment-btn:last-child {
-    margin-bottom: 0;
-  }
-
-  .cost-input-group {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .currency-btn {
-    min-width: auto;
-    width: 100%;
-  }
-
-  /* Дропдауни адаптивні */
-  .notifications-dropdown {
-    width: 95vw;
-    max-width: 300px;
-    right: 0;
-  }
-
-  .profile-dropdown {
-    width: 95vw;
-    max-width: 280px;
-    right: 0;
-  }
-
-  .lang-dropdown {
-    width: 95vw;
-    max-width: 200px;
-    left: 0;
-  }
-}
-
-/* Медіа-запити для маленьких мобільних пристроїв (до 480px) */
-@media screen and (max-width: 480px) {
-  /* Ще менші відступи */
-  .header {
-    padding: 60px 15px 15px 15px;
-  }
-
-  .manage {
-    padding: 15px 15px;
-  }
-
-  .info__items {
-    padding: 0 15px;
-  }
-
-  .chart-section {
-    margin: 15px;
-    padding: 15px 12px;
-  }
-
-  .courses {
-    padding: 0 15px;
-  }
-
-  /* Менші шрифти */
   .header__greetings {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .header__description {
-    font-size: 13px;
-  }
-
-  .info__num {
-    font-size: 22px;
-    line-height: 28px;
-  }
-
-  .chart-title {
-    font-size: 16px;
-  }
-
-  /* Календар повністю на ширину */
-  .calendar-wrapper {
-    width: 98vw;
-    max-width: none;
-    left: 1%;
-    transform: none;
-    right: auto;
-  }
-
-  /* Менша ширина сайдбару */
-  .sidebar {
-    width: 260px;
-  }
-
-  /* Модальні вікна на всю ширину */
-  .modal-content {
-    width: 98%;
-    margin: 1%;
-  }
-
-  .modal-body {
-    padding: 25px 15px 30px;
-  }
-
-  .modal-footer {
-    padding: 15px 15px 30px;
-  }
-
-  /* Інформаційні картки менші */
-  .info__item {
-    padding: 12px;
-  }
-
-  .info__item-header h3 {
     font-size: 12px;
   }
 
-  .info__description-text {
-    font-size: 10px;
+  /* Зменшуємо відступи в хедері */
+  .header__right {
+    gap: 5px;
+  }
+
+  .header__email {
+    margin-right: 15px;
+  }
+
+  .language-selector {
+    margin-left: 15px;
+  }
+
+  /* Адаптація профілю користувача */
+  .user__info {
+    display: none; /* Ховаємо текст на мобільних */
+  }
+
+  .user__profile {
+    padding: 8px;
+  }
+
+  /* Адаптація дропдаунів */
+  .lang-dropdown,
+  .notifications-dropdown,
+  .profile-dropdown {
+    position: fixed;
+    top: 70px;
+    right: 15px;
+    left: auto;
+    width: calc(100vw - 30px);
+    max-width: 300px;
+  }
+
+  /* Мобільні стилі для сайдбару */
+  .sidebar__nav {
+    margin: 30px 20px;
+  }
+
+  .sidebar__bottom {
+    margin: 0;
+    padding: 15px 20px 15px 20px;
+  }
+
+  .sidebar__link {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  .sidebar__item + .sidebar__item {
+    margin-top: 20px;
+  }
+
+  /* Логотип */
+  .logo {
+    margin: 15px 0 0;
+  }
+
+  .logo img {
+    max-width: 140px;
   }
 }
 
-/* Touch-friendly стилі */
-@media (pointer: coarse) {
-  /* Збільшені области кліку для touch */
-  .sidebar__link,
-  .sidebar__sublink {
-    padding: 12px 0;
+/* ========================= */
+/* МАЛЕНЬКІ МОБІЛЬНІ (до 480px) */
+/* ========================= */
+@media screen and (max-width: 480px) {
+  .sidebar__toggle {
+    padding: 6px;
+    margin-right: 10px;
+  }
+
+  .header {
+    padding: 0 10px 8px 10px;
+    min-height: 55px;
+    gap: 10px;
+  }
+
+  .header__greetings {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .header__description {
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  .header__email {
+    margin-right: 10px;
+  }
+
+  .header__email svg,
+  .header__massage svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .language-selector {
+    margin-left: 10px;
+  }
+
+  .lang-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .lang-btn img {
+    width: 24px;
+    height: 16px;
+  }
+
+  .lang-text {
+    width: 45px;
+  }
+
+  /* Адаптація нотифікацій */
+  .notification-badge,
+  .email-badge {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    top: -4px;
+    right: -4px;
+  }
+
+  /* Дропдауни на маленьких екранах */
+  .lang-dropdown,
+  .notifications-dropdown,
+  .profile-dropdown {
+    width: calc(100vw - 20px);
+    right: 10px;
+    top: 60px;
+  }
+
+  /* Сайдбар компактніший */
+  .sidebar {
+    width: 220px;
+    left: -220px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar__nav {
+    margin: 25px 15px;
+  }
+
+  .sidebar__link {
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .sidebar__link svg {
+    max-width: 16px;
+    max-height: 16px;
+  }
+}
+
+/* ========================= */
+/* АНІМАЦІЇ ТА ПЕРЕХОДИ */
+/* ========================= */
+@media screen and (max-width: 1075px) {
+  /* Плавна анімація появи сайдбару */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Анімація для overlay */
+  .sidebar__overlay {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  /* Анімація для кнопки бургер */
+  .sidebar__toggle {
+    transition: all 0.2s ease;
+  }
+
+  .sidebar__toggle:active {
+    transform: scale(0.95);
+  }
+}
+
+/* ========================= */
+/* ПОКРАЩЕННЯ UX */
+/* ========================= */
+@media screen and (max-width: 1075px) {
+  /* Збільшуємо область натискання */
+  .sidebar__link {
     min-height: 44px;
     display: flex;
     align-items: center;
   }
 
-  button,
   .header__email,
   .header__massage,
   .lang-btn,
-  .user__profile,
-  .manage__content,
-  .manage__channel,
-  .info__description-btn {
+  .user__profile {
     min-height: 44px;
     min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Збільшені кнопки в модальних вікнах */
-  .btn-cancel,
-  .btn-next,
-  .btn-create-content,
-  .payment-btn,
-  .currency-btn {
-    min-height: 48px;
+  /* Покращуємо читабельність */
+  .sidebar__link {
+    font-weight: 500;
   }
 
-  /* Збільшені інпути */
-  .form-input,
-  .cost-input {
-    min-height: 48px;
-    padding: 14px 16px;
-    font-size: 16px; /* Запобігає zoom на iOS */
+  /* Додаємо відступи для зручності */
+  .sidebar__item:first-child {
+    margin-top: 0;
   }
 
-  /* Збільшені елементи календаря */
-  .calendar-date {
-    min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* Збільшені дропдауни опції */
-  .lang-dropdown li,
-  .period-option,
-  .currency-option,
-  .notification-item,
-  .profile-menu-item {
-    min-height: 48px;
-    padding: 12px 16px;
+  .sidebar__item:last-child {
+    margin-bottom: 20px;
   }
 }
 
-/* Класи-утиліти для JavaScript */
-.mobile-menu-open {
-  overflow: hidden;
-}
-
-.mobile-menu-open .sidebar__overlay {
-  display: block;
-}
-
-/* Додаткові утіліти для мобільних */
-@media screen and (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
+/* ========================= */
+/* ЛАНДШАФТНА ОРІЄНТАЦІЯ */
+/* ========================= */
+@media screen and (max-width: 1075px) and (orientation: landscape) {
+  .header {
+    min-height: 50px;
+    padding: 0 10px 5px 10px;
+    gap: 10px;
   }
 
-  .mobile-center {
-    text-align: center !important;
+  .sidebar__nav {
+    margin: 20px 15px;
   }
 
-  .mobile-full-width {
-    width: 100% !important;
+  .sidebar__item + .sidebar__item {
+    margin-top: 15px;
   }
-}
 
-@media screen and (min-width: 769px) {
-  .mobile-only {
-    display: none !important;
+  .sidebar__link {
+    padding: 8px 0;
+    font-size: 14px;
   }
 }
 
-/* Hovers тільки для не-тач пристроїв */
-@media (hover: hover) {
-  .sidebar__toggle:hover {
-    background: #096fce;
-    transform: scale(1.05);
+/* ========================= */
+/* ACCESSIBILITY ПОКРАЩЕННЯ */
+/* ========================= */
+@media screen and (max-width: 1075px) {
+  /* Фокус стилі для кращої доступності */
+
+
+  /* Покращуємо контрастність */
+  .sidebar__overlay {
+    backdrop-filter: blur(2px);
+  }
+
+  /* Зменшуємо анімації для користувачів з motion sensitivity */
+  @media (prefers-reduced-motion: reduce) {
+    .sidebar,
+    .sidebar__overlay,
+    .sidebar__toggle {
+      transition: none;
+    }
   }
 }
+
+/* ========================= */
+/* ПОКРАЩЕНІ АДАПТИВНІ СТИЛІ */
+/* ========================= */
+
+/* Додаткові стилі для планшетів */
+@media (min-width: 768px) and (max-width: 1075px) {
+	.info__items {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	.info__item {
+		flex: 0 1 calc(50% - 10px);
+		min-width: 280px;
+	}
+
+	.manage__inner {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 12px;
+	}
+
+	.manage__content,
+	.manage__channel {
+		flex: 0 1 auto;
+		min-width: 180px;
+	}
+
+	.manage__trial {
+		flex: 1 1 100%;
+		order: 3;
+		margin-top: 10px;
+	}
+
+	.manage__calendar {
+		flex: 0 1 auto;
+		min-width: 250px;
+	}
+
+	.courses__items {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	.courses__item {
+		min-width: 320px;
+	}
+
+	.chart-legend {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
+}
+
+/* Покращені мобільні стилі */
+@media (max-width: 768px) {
+	.info__items {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.info__item {
+		flex: none;
+		width: 100%;
+		min-width: auto;
+	}
+
+	.manage__inner {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 12px;
+	}
+
+	.manage__content,
+	.manage__channel {
+		width: 100%;
+		text-align: center;
+		min-width: auto;
+	}
+
+	.manage__trial {
+		flex-direction: column;
+		text-align: center;
+		gap: 10px;
+		order: unset;
+	}
+
+	.manage__calendar {
+		width: 100%;
+		min-width: auto;
+	}
+
+	.courses__items {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+
+	.courses__item {
+		min-width: auto;
+		max-width: 100%;
+	}
+
+	.chart-container {
+		height: 220px;
+	}
+
+	.chart-legend {
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+	}
+}
+
+/* Дуже маленькі екрани */
+@media (max-width: 480px) {
+	.info__items {
+		gap: 10px;
+	}
+
+	.info__item {
+		padding: 10px;
+		min-height: 110px;
+	}
+
+	.info__num {
+		font-size: 20px;
+		line-height: 26px;
+	}
+
+	.chart-container {
+		height: 200px;
+	}
+
+	.chart-title {
+		font-size: 16px;
+	}
+
+	.manage {
+		padding: 12px 10px;
+	}
+
+	.manage__content,
+	.manage__channel {
+		padding: 10px 12px;
+		font-size: 13px;
+		min-height: 40px;
+	}
+
+	.manage__trial {
+		padding: 10px 12px;
+	}
+
+	.manage__trial-left p {
+		font-size: 12px;
+	}
+
+	.calendar-wrapper {
+		width: calc(100vw - 20px);
+		right: 10px;
+		max-width: 320px;
+	}
+}
+
+/* Покращення для touch пристроїв */
+@media (hover: none) and (pointer: coarse) {
+	.manage__content:active,
+	.manage__channel:active {
+		background-color: #0066cc;
+		transform: scale(0.98);
+	}
+
+	.courses__btn:active {
+		background-color: rgba(2, 132, 253, 0.1);
+		border-color: #0284fd;
+		transform: scale(0.98);
+	}
+
+	.sidebar__link:active {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+}
+
+

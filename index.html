@@ -17,14 +17,8 @@
 
 <body>
   <!-- Мобільна кнопка меню -->
-  <button class="sidebar__toggle" id="sidebarToggle" aria-label="Відкрити меню">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </button>
+
+
 
   <!-- Overlay для мобільного меню -->
   <div class="sidebar__overlay" id="sidebarOverlay"></div>
@@ -38,7 +32,7 @@
         <nav class="sidebar__nav">
           <ul class="sidebar__list">
             <li class="sidebar__item">
-              <a class="sidebar__link" href="#dashboard">
+              <a class="sidebar__link" href="./index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                   <path
                     d="M15.5971 8.52379C15.5967 8.52345 15.5964 8.5231 15.596 8.52276L9.4766 2.40417C9.21577 2.14325 8.86897 1.99951 8.50009 1.99951C8.13121 1.99951 7.78442 2.14314 7.52347 2.40406L1.40724 8.51955C1.40518 8.52161 1.40312 8.52379 1.40106 8.52585C0.865419 9.06452 0.866335 9.93851 1.40369 10.4758C1.64919 10.7214 1.97343 10.8636 2.32011 10.8785C2.33419 10.8799 2.34838 10.8806 2.36269 10.8806H2.60659V15.3835C2.60659 16.2745 3.33164 16.9995 4.223 16.9995H6.61712C6.85976 16.9995 7.05662 16.8028 7.05662 16.5601V13.0298C7.05662 12.6232 7.38739 12.2924 7.79404 12.2924H9.20615C9.6128 12.2924 9.94357 12.6232 9.94357 13.0298V16.5601C9.94357 16.8028 10.1403 16.9995 10.3831 16.9995H12.7772C13.6685 16.9995 14.3936 16.2745 14.3936 15.3835V10.8806H14.6198C14.9885 10.8806 15.3353 10.737 15.5964 10.476C16.1343 9.93782 16.1345 9.06235 15.5971 8.52379Z"
@@ -153,6 +147,15 @@
     </aside>
     <div class="main-content">
       <header class="header">
+        <!-- Мобільна кнопка меню -->
+        <button class="sidebar__toggle" id="sidebarToggle" aria-label="Відкрити меню">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
         <div class="header__left">
           <p class="header__greetings">Good Morning, Dmitriy!</p>
           <p class="header__description">Here's what's happening with your store today.</p>
@@ -1887,7 +1890,7 @@
         console.log('Initializing view switching');
         // Re-get elements to ensure they exist
         const channelBtn = document.getElementById('createChannelBtn');
-        const dashboardLink = document.querySelector('a[href="#dashboard"]');
+        const dashboardLink = document.querySelector('a[href="./index.html"]');
         const logoLink = document.querySelector('.logo');
         // Add click event listener to the "Создать канал трансляции" button
         if (channelBtn) {
