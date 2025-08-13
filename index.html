@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voronkaboom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <main class="main">
+    <aside class="sidebar">
+      <a class="logo" href="./index.html">
+        <img src="./images/logo.svg" alt="Voronkaboom Logo" />
+      </a>
+      <div class="sidebar__content">
+        <nav class="sidebar__nav">
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                  <path
+                    d="M15.5971 8.52379C15.5967 8.52345 15.5964 8.5231 15.596 8.52276L9.4766 2.40417C9.21577 2.14325 8.86897 1.99951 8.50009 1.99951C8.13121 1.99951 7.78442 2.14314 7.52347 2.40406L1.40724 8.51955C1.40518 8.52161 1.40312 8.52379 1.40106 8.52585C0.865419 9.06452 0.866335 9.93851 1.40369 10.4758C1.64919 10.7214 1.97343 10.8636 2.32011 10.8785C2.33419 10.8799 2.34838 10.8806 2.36269 10.8806H2.60659V15.3835C2.60659 16.2745 3.33164 16.9995 4.223 16.9995H6.61712C6.85976 16.9995 7.05662 16.8028 7.05662 16.5601V13.0298C7.05662 12.6232 7.38739 12.2924 7.79404 12.2924H9.20615C9.6128 12.2924 9.94357 12.6232 9.94357 13.0298V16.5601C9.94357 16.8028 10.1403 16.9995 10.3831 16.9995H12.7772C13.6685 16.9995 14.3936 16.2745 14.3936 15.3835V10.8806H14.6198C14.9885 10.8806 15.3353 10.737 15.5964 10.476C16.1343 9.93782 16.1345 9.06235 15.5971 8.52379Z"
+                    fill="white" />
+                </svg>
+                Дашборд
+              </a>
+            </li>
+            <li class="sidebar__item sidebar__item--expandable">
+              <a class="sidebar__link" href="#content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none">
+                  <path
+                    d="M0 -0.000488281H15V2.8884H0V-0.000488281ZM12.75 3.61062H0.75V11.5551C0.75 11.9382 0.908035 12.3056 1.18934 12.5764C1.47064 12.8473 1.85218 12.9995 2.25 12.9995H12.75C13.1478 12.9995 13.5294 12.8473 13.8107 12.5764C14.092 12.3056 14.25 11.9382 14.25 11.5551V3.61062H12.75ZM10.5 7.94396H4.5V6.49951H10.5V7.94396Z"
+                    fill="white" />
+                </svg>
+                Контент
+                <svg class="sidebar__arrow sidebar__arrow--right" xmlns="http://www.w3.org/2000/svg" width="6"
+                  height="10" viewBox="0 0 6 10" fill="none">
+                  <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+              <ul class="sidebar__submenu">
+                <li class="sidebar__subitem">
+                  <a class="sidebar__sublink" href="#info-product">
+                    <span class="sidebar__dash">–</span>
+                    Інфо продукт
+                  </a>
+                </li>
+                <li class="sidebar__subitem">
+                  <a class="sidebar__sublink" href="#funnel">
+                    <span class="sidebar__dash">–</span>
+                    Воронка
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#chanel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.31331 2.58782H7.26616C7.43921 2.58782 7.57947 2.72809 7.57947 2.90113V8.85399C7.57947 9.02703 7.43921 9.1673 7.26616 9.1673H1.31331C1.14026 9.1673 1 9.02703 1 8.85399V2.90113C1 2.72809 1.14026 2.58782 1.31331 2.58782ZM12.3636 2.09176L15.9082 5.63645C16.0306 5.7588 16.0306 5.95716 15.9082 6.07953L12.3635 9.6242C12.2412 9.74654 12.0428 9.74654 11.9205 9.6242L8.3758 6.07951C8.25346 5.95716 8.25346 5.7588 8.3758 5.63643L11.9205 2.09176C12.0428 1.96941 12.2412 1.96941 12.3636 2.09176ZM1.31331 10.4205H7.26616C7.43921 10.4205 7.57947 10.5608 7.57947 10.7338V16.6867C7.57947 16.8597 7.43921 17 7.26616 17H1.31331C1.14026 17 1 16.8597 1 16.6867V10.7338C1 10.5608 1.14026 10.4205 1.31331 10.4205ZM9.14601 10.4205H15.0989C15.2719 10.4205 15.4122 10.5608 15.4122 10.7338V16.6867C15.4122 16.8597 15.2719 17 15.0989 17H9.14601C8.97297 17 8.8327 16.8597 8.8327 16.6867V10.7338C8.8327 10.5608 8.97297 10.4205 9.14601 10.4205Z"
+                    fill="white" />
+                </svg>
+                Канал трансляции
+                <svg class="sidebar__arrow sidebar__arrow--right" xmlns="http://www.w3.org/2000/svg" width="6"
+                  height="10" viewBox="0 0 6 10" fill="none">
+                  <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#sells">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                  <path
+                    d="M4.44763 12.3342C4.58841 12.418 4.70929 12.527 4.80575 12.653H6.62869V10.8853L5.7643 10.3494C5.57179 10.23 5.51249 9.97723 5.63183 9.78472C5.75121 9.59226 6.00393 9.53295 6.19652 9.65225L7.03882 10.1745L7.773 9.71929C6.30863 7.7113 6.64493 4.86608 8.59416 3.26018C5.38335 2.18456 2.01519 4.5756 1.99999 8.00966C1.99206 9.83082 2.96163 11.4496 4.44763 12.3342Z"
+                    fill="white" />
+                  <path d="M5.06189 13.4733H8.94444V14.4029H5.06189V13.4733Z" fill="white" />
+                  <path
+                    d="M7.44916 10.8853V12.653H9.196C9.28877 12.5306 9.40448 12.4257 9.53914 12.3464C9.91192 12.127 10.2541 11.8594 10.5574 11.5531C9.70068 11.3602 8.93128 10.9341 8.31945 10.3453C8.29613 10.3605 8.128 10.4645 7.44916 10.8853Z"
+                    fill="white" />
+                  <path
+                    d="M11.5968 3.00146C9.44623 3.00146 7.68695 4.7786 7.68695 6.93869C7.68695 8.97052 9.24667 10.653 11.2466 10.8326C13.5609 11.0393 15.5067 9.2047 15.5067 6.93869C15.5067 4.78279 13.7528 3.00146 11.5968 3.00146ZM12.0075 8.71635V8.80206C12.0075 9.02856 11.8239 9.21219 11.5974 9.21219C11.3709 9.21219 11.1873 9.02856 11.1873 8.80206V8.76272C10.9983 8.72958 10.8257 8.65887 10.6076 8.51618C10.418 8.39218 10.3649 8.13801 10.4889 7.94845C10.6129 7.75886 10.8671 7.70576 11.0566 7.82973C11.2565 7.96054 11.3213 7.97073 11.5946 7.96885C11.8584 7.9671 11.9636 7.75998 11.9841 7.6379C12.0025 7.52829 11.9818 7.38256 11.7786 7.31073C11.4381 7.19034 11.0889 7.05221 10.8415 6.8582C10.2782 6.41641 10.4483 5.40736 11.1873 5.13883V5.07944C11.1873 4.85294 11.3709 4.66932 11.5974 4.66932C11.8239 4.66932 12.0075 4.85294 12.0075 5.07944V5.10219C12.2096 5.15923 12.3724 5.26239 12.4842 5.37608C12.643 5.53756 12.6408 5.79722 12.4793 5.95605C12.3179 6.1148 12.0584 6.11269 11.8996 5.95149C11.8767 5.92915 11.7504 5.8238 11.4769 5.90618C11.3677 5.93907 11.3383 6.05232 11.3319 6.08625C11.3186 6.15707 11.3376 6.20481 11.3478 6.21279C11.5025 6.33413 11.7906 6.44495 12.052 6.53737C13.1329 6.91944 13.0012 8.3571 12.0075 8.71635Z"
+                    fill="white" />
+                  <path
+                    d="M5.71814 15.7149C5.71814 16.4235 6.29462 17 7.00321 17C7.7118 17 8.28827 16.4235 8.28827 15.7149V15.2228H5.71814V15.7149Z"
+                    fill="white" />
+                </svg>
+                Продажи
+                <span class="sidebar__badge">New</span>
+                <svg class="sidebar__arrow sidebar__arrow--right" xmlns="http://www.w3.org/2000/svg" width="6"
+                  height="10" viewBox="0 0 6 10" fill="none">
+                  <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#users">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                  <path
+                    d="M8.5 4C9.14647 4 9.76645 4.23614 10.2236 4.65648C10.6807 5.07683 10.9375 5.64693 10.9375 6.24138C10.9375 6.83583 10.6807 7.40593 10.2236 7.82627C9.76645 8.24661 9.14647 8.48276 8.5 8.48276C7.85353 8.48276 7.23355 8.24661 6.77643 7.82627C6.31931 7.40593 6.0625 6.83583 6.0625 6.24138C6.0625 5.64693 6.31931 5.07683 6.77643 4.65648C7.23355 4.23614 7.85353 4 8.5 4ZM3.25 5.55172C3.47161 5.55172 3.69104 5.59186 3.89578 5.66984C4.10052 5.74782 4.28654 5.86212 4.44324 6.00621C4.59994 6.1503 4.72424 6.32137 4.80905 6.50963C4.89385 6.69789 4.9375 6.89967 4.9375 7.10345C4.9375 7.30722 4.89385 7.509 4.80905 7.69727C4.72424 7.88553 4.59994 8.05659 4.44324 8.20068C4.28654 8.34477 4.10052 8.45907 3.89578 8.53705C3.69104 8.61504 3.47161 8.65517 3.25 8.65517C3.02839 8.65517 2.80896 8.61504 2.60422 8.53705C2.39948 8.45907 2.21346 8.34477 2.05676 8.20068C1.90006 8.05659 1.77576 7.88553 1.69095 7.69727C1.60615 7.509 1.5625 7.30722 1.5625 7.10345C1.5625 6.89967 1.60615 6.69789 1.69095 6.50963C1.77576 6.32137 1.90006 6.1503 2.05676 6.00621C2.21346 5.86212 2.39948 5.74782 2.60422 5.66984C2.80896 5.59186 3.02839 5.55172 3.25 5.55172ZM1 12.6207C1 11.097 2.34297 9.86207 4 9.86207C4.3 9.86207 4.59062 9.90302 4.86484 9.97845C4.09375 10.7716 3.625 11.819 3.625 12.9655V13.3103C3.625 13.556 3.68125 13.7888 3.78203 14H1.75C1.33516 14 1 13.6918 1 13.3103V12.6207ZM13.218 14C13.3187 13.7888 13.375 13.556 13.375 13.3103V12.9655C13.375 11.819 12.9062 10.7716 12.1352 9.97845C12.4094 9.90302 12.7 9.86207 13 9.86207C14.657 9.86207 16 11.097 16 12.6207V13.3103C16 13.6918 15.6648 14 15.25 14H13.218ZM12.0625 7.10345C12.0625 6.69191 12.2403 6.29722 12.5568 6.00621C12.8732 5.71521 13.3024 5.55172 13.75 5.55172C14.1976 5.55172 14.6268 5.71521 14.9432 6.00621C15.2597 6.29722 15.4375 6.69191 15.4375 7.10345C15.4375 7.51499 15.2597 7.90968 14.9432 8.20068C14.6268 8.49169 14.1976 8.65517 13.75 8.65517C13.3024 8.65517 12.8732 8.49169 12.5568 8.20068C12.2403 7.90968 12.0625 7.51499 12.0625 7.10345ZM4.75 12.9655C4.75 11.0603 6.42812 9.51724 8.5 9.51724C10.5719 9.51724 12.25 11.0603 12.25 12.9655V13.3103C12.25 13.6918 11.9148 14 11.5 14H5.5C5.08516 14 4.75 13.6918 4.75 13.3103V12.9655Z"
+                    fill="white" />
+                </svg>
+                Пользователи
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="sidebar__bottom">
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#settings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path
+                    d="M13.6191 5.64844H13.3006C13.1972 5.32471 13.0667 5.01023 12.9103 4.7081L13.1358 4.48257C13.6827 3.93633 13.668 3.06094 13.136 2.52949L12.4707 1.86416C11.9395 1.33233 11.064 1.31692 10.5176 1.86396L10.2919 2.08966C9.98975 1.93333 9.67525 1.80278 9.35155 1.69934V1.38085C9.35155 0.619453 8.73209 0 7.97067 0H7.02927C6.26788 0 5.64843 0.619453 5.64843 1.38085V1.69934C5.32473 1.80275 5.01022 1.9333 4.70809 2.08966L4.48259 1.86416C3.93729 1.31821 3.06175 1.33102 2.52955 1.86398L1.86413 2.52935C1.33233 3.06056 1.31695 3.93601 1.86395 4.48242L2.08965 4.70812C1.9333 5.01026 1.80278 5.32471 1.69933 5.64847H1.38088C0.619481 5.64844 0 6.26789 0 7.02929V7.97071C0 8.73211 0.619481 9.35156 1.38088 9.35156H1.69933C1.80278 9.67529 1.9333 9.98977 2.08965 10.2919L1.86413 10.5174C1.3173 11.0637 1.33195 11.9391 1.86395 12.4705L2.52931 13.1358C3.06043 13.6677 3.936 13.6831 4.48238 13.136L4.70809 12.9103C5.01022 13.0667 5.32473 13.1972 5.64843 13.3007V13.6192C5.64843 14.3805 6.26791 15 7.0293 15H7.9707C8.73209 15 9.35157 14.3805 9.35157 13.6192V13.3007C9.67527 13.1972 9.98978 13.0667 10.2919 12.9103L10.5174 13.1358C11.0627 13.6818 11.9382 13.669 12.4705 13.136L13.1359 12.4706C13.6677 11.9394 13.6831 11.064 13.136 10.5175L12.9103 10.2918C13.0667 9.98971 13.1972 9.67526 13.3007 9.3515H13.6191C14.3805 9.3515 15 8.73205 15 7.97065V7.02923C15 6.26789 14.3805 5.64844 13.6191 5.64844ZM7.49999 10.7637C5.70037 10.7637 4.23632 9.29959 4.23632 7.5C4.23632 5.70041 5.70037 4.23633 7.49999 4.23633C9.2996 4.23633 10.7637 5.70041 10.7637 7.5C10.7637 9.29959 9.2996 10.7637 7.49999 10.7637Z"
+                    fill="white" />
+                </svg>
+                Настройки
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#signout">
+                <img src="./images/shutdown.svg" alt="" />
+                Выход
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <div class="main-content">
+      <header class="header">
+        <div class="header__left">
+          <p class="header__greetings">Good Morning, Dmitriy!</p>
+          <p class="header__description">Here's what's happening with your store today.</p>
+        </div>
+        <div class="header__right">
+          <a class="header__email" href="#" id="emailBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M2.86 1.575L12.688 9.01688C12.778 9.08503 12.8875 9.12187 13 9.12187C13.1125 9.12187 13.222 9.08503 13.312 9.01688L23.14 1.575H2.86ZM24.44 2.55937L14.248 10.2769C13.888 10.5495 13.45 10.6969 13 10.6969C12.5499 10.6969 12.112 10.5495 11.752 10.2769L1.56 2.55937V19.425H24.44V2.55937ZM1.3 0H24.7C25.0448 0 25.3754 0.138281 25.6192 0.384423C25.863 0.630564 26 0.964403 26 1.3125V19.6875C26 20.0356 25.863 20.3694 25.6192 20.6156C25.3754 20.8617 25.0448 21 24.7 21H1.3C0.955218 21 0.624558 20.8617 0.380761 20.6156C0.136964 20.3694 0 20.0356 0 19.6875V1.3125C0 0.964403 0.136964 0.630564 0.380761 0.384423C0.624558 0.138281 0.955218 0 1.3 0Z"
+                fill="#0284FD" />
+            </svg>
+            <span class="email-badge" style="display: none;">2</span>
+          </a>
+          <div class="notifications-container">
+            <button class="header__massage" id="notificationsBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="26" viewBox="0 0 22 26" fill="none">
+                <path
+                  d="M18.6521 8.57679C18.5029 6.84042 17.7582 5.20727 16.5424 3.94958C15.3266 2.69189 13.713 1.88566 11.9706 1.66528V0.962963C11.9706 0.707569 11.8683 0.462636 11.6863 0.282045C11.5043 0.101455 11.2574 0 11 0C10.7426 0 10.4957 0.101455 10.3137 0.282045C10.1317 0.462636 10.0294 0.707569 10.0294 0.962963V1.66528C8.28684 1.88571 6.67308 2.69213 5.45722 3.95008C4.24136 5.20802 3.49686 6.84148 3.34788 8.57807L3.02176 11.1871L3.02047 11.1999C2.89725 12.6542 2.23571 14.0117 1.16341 15.0107L1.15047 15.0235C0.838588 15.3124 0.49953 15.627 0.283412 16.2548C0.0841178 16.8364 0 17.6556 0 18.9575C0 19.3979 0.0802352 19.7972 0.282118 20.1323C0.490471 20.479 0.790706 20.696 1.11424 20.8321C1.42482 20.9618 1.76776 21.0247 2.09388 21.0658C2.31259 21.0927 2.55588 21.1133 2.79918 21.1338L3.13435 21.1634C4.93576 21.3316 7.61718 21.5062 11 21.5062C13.738 21.5125 16.4748 21.3883 19.2008 21.1338C19.4441 21.1133 19.6887 21.0927 19.9061 21.0658C20.2322 21.0247 20.5752 20.9631 20.8858 20.8321C21.2323 20.6945 21.5243 20.4489 21.7179 20.1323C21.9198 19.7972 22 19.3979 22 18.9575C22 17.6556 21.9159 16.8364 21.7153 16.2548C21.5005 15.627 21.1614 15.3124 20.8508 15.0222L20.8379 15.0107C19.7651 14.0119 19.1031 12.6543 18.9795 11.1999V11.1871L18.6521 8.57679ZM11 2.88889C12.6016 2.88887 14.1448 3.48603 15.3234 4.56194C16.502 5.63785 17.2301 7.11394 17.3632 8.69748V8.71032L17.6906 11.3193C17.8432 13.086 18.6483 14.7344 19.9514 15.9479C20.2491 16.224 20.3824 16.3537 20.4911 16.6682C20.6166 17.0367 20.7059 17.6723 20.7059 18.9575C20.7059 19.2528 20.6515 19.4005 20.6075 19.4737C20.5687 19.5379 20.5079 19.5957 20.3798 19.6496C20.2374 19.7099 20.0355 19.7549 19.7456 19.7908C19.5515 19.8165 19.3509 19.8332 19.1245 19.8524L18.744 19.8858C16.1692 20.116 13.5852 20.2282 11 20.2222C7.66118 20.2222 5.02118 20.0502 3.256 19.8858L2.87553 19.8524C2.66814 19.8359 2.46105 19.8158 2.25435 19.7921C2.03784 19.7716 1.82479 19.7242 1.62024 19.6509C1.49082 19.5957 1.43129 19.5379 1.39247 19.4737C1.34847 19.4005 1.29412 19.2528 1.29412 18.9575C1.29412 17.6723 1.38341 17.0355 1.50894 16.6682C1.61765 16.3537 1.75094 16.224 2.04859 15.9479C3.35167 14.7344 4.15684 13.086 4.30941 11.3193L4.63553 8.71032L4.63682 8.69748C4.76991 7.11394 5.49797 5.63785 6.67661 4.56194C7.85524 3.48603 9.39838 2.88887 11 2.88889ZM5.25412 22.2123C5.21201 22.0509 5.10822 21.912 4.96471 21.8251C4.8212 21.7382 4.64925 21.7102 4.48526 21.7469C4.32127 21.7836 4.17812 21.8822 4.08612 22.0218C3.99412 22.1614 3.96049 22.331 3.99235 22.4948C4.16202 23.2414 4.52105 23.9326 5.03541 24.5029C5.46038 24.9741 5.98077 25.3509 6.56257 25.6089C7.14438 25.8669 7.7745 26.0002 8.41177 26C9.04903 26.0002 9.67915 25.8669 10.261 25.6089C10.8428 25.3509 11.3632 24.9741 11.7881 24.5029C11.9028 24.3761 11.9619 24.2092 11.9526 24.0391C11.9432 23.869 11.8661 23.7095 11.7383 23.5958C11.6104 23.4821 11.4423 23.4234 11.2708 23.4326C11.0994 23.4419 10.9386 23.5184 10.824 23.6452C10.5205 23.9821 10.1488 24.2516 9.73311 24.4361C9.31742 24.6207 8.86716 24.7161 8.41177 24.716C7.7775 24.7181 7.15673 24.5343 6.62726 24.1878C6.09778 23.8414 5.68314 23.3476 5.43529 22.7683C5.3579 22.5888 5.29735 22.4027 5.25412 22.2123Z"
+                  fill="#0284FD" />
+              </svg>
+              </svg>
+              <span class="notification-badge">3</span>
+            </button>
+            <div class="notifications-dropdown" id="notificationsDropdown">
+              <div class="notifications-header">
+                <h3>Уведомления</h3>
+              </div>
+              <div class="notifications-list">
+                <div class="notification-item unread">
+                  <div class="notification-avatar">
+                    <img src="./images/settings-massage.svg" alt="" />
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-title">Настройки</p>
+                    <p class="notification-text">Действие этог уведомление</p>
+                  </div>
+                </div>
+                <div class="notification-item unread">
+                  <div class="notification-avatar">
+                    <img src="./images/massage.svg" alt="" />
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-title">Сообщение</p>
+                    <p class="notification-text">Вам пришло сообщение</p>
+                  </div>
+                </div>
+                <div class="notification-item unread">
+                  <div class="notification-avatar">
+                    <img src="./images/profile-massage.svg" alt="" />
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-title">Профиль</p>
+                    <p class="notification-text">Обновите ваш пароль</p>
+                  </div>
+                </div>
+                <div class="notification-item">
+                  <div class="notification-avatar">
+                    <img src="./images/error.svg" alt="" />
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-title">Application Error</p>
+                    <p class="notification-text">Check Your runnung application</p>
+                  </div>
+                </div>
+              </div>
+              <div class="notifications-footer">
+                <a href="#" class="view-all">Смотреть все уведомления</a>
+              </div>
+            </div>
+          </div>
+          <div class="language-selector">
+            <button class="lang-btn" id="langBtn">
+              <img src="./images/english.svg" alt="English" />
+              <span class="lang-text">English</span>
+              <svg class="arrow" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <ul class="lang-dropdown" id="langDropdown">
+              <li data-lang="en" class="active">
+                <img src="./images/english.svg" alt="English" />
+                English
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13"
+                  fill="none">
+                  <path
+                    d="M1.70711 6.29289C1.31658 5.90237 0.683418 5.90237 0.292893 6.29289C-0.0976311 6.68342 -0.0976311 7.31658 0.292893 7.70711L5.29289 12.7071C5.68342 13.0976 6.31658 13.0976 6.70711 12.7071L17.7071 1.70711C18.0976 1.31658 18.0976 0.683418 17.7071 0.292893C17.3166 -0.0976311 16.6834 -0.0976311 16.2929 0.292893L6 10.5858L1.70711 6.29289Z"
+                    fill="#565656" />
+                  <mask id="mask0_65_4510" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="18"
+                    height="13" />
+                  <g mask="url(#mask0_65_4510)" />
+                </svg>
+              </li>
+              <li data-lang="ru">
+                <img src="./images/russian.svg" alt="Русский" />
+                Русский
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13"
+                  fill="none" style="display: none;">
+                  <path
+                    d="M1.70711 6.29289C1.31658 5.90237 0.683418 5.90237 0.292893 6.29289C-0.0976311 6.68342 -0.0976311 7.31658 0.292893 7.70711L5.29289 12.7071C5.68342 13.0976 6.31658 13.0976 6.70711 12.7071L17.7071 1.70711C18.0976 1.31658 18.0976 0.683418 17.7071 0.292893C17.3166 -0.0976311 16.6834 -0.0976311 16.2929 0.292893L6 10.5858L1.70711 6.29289Z"
+                    fill="#565656" />
+                </svg>
+              </li>
+              <li data-lang="es">
+                <img src="./images/spanish.png" alt="Spanish" />
+                Spanish
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13"
+                  fill="none" style="display: none;">
+                  <path
+                    d="M1.70711 6.29289C1.31658 5.90237 0.683418 5.90237 0.292893 6.29289C-0.0976311 6.68342 -0.0976311 7.31658 0.292893 7.70711L5.29289 12.7071C5.68342 13.0976 6.31658 13.0976 6.70711 12.7071L17.7071 1.70711C18.0976 1.31658 18.0976 0.683418 17.7071 0.292893C17.3166 -0.0976311 16.6834 -0.0976311 16.2929 0.292893L6 10.5858L1.70711 6.29289Z"
+                    fill="#565656" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="user-profile-container">
+            <button class="user__profile" id="profileBtn">
+              <div class="user__inner">
+                <img class="user__avatar" src="./images/avatar.png" alt="User Avatar" />
+                <div class="user__info">
+                  <p class="user__name">Dmitriy Gladenko</p>
+                  <p class="user__id">@Gladenko</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 0.900391C15.0258 0.900391 19.0996 4.97421 19.0996 10C19.0996 15.0258 15.0258 19.0996 10 19.0996C4.97421 19.0996 0.900391 15.0258 0.900391 10C0.900391 4.97421 4.97421 0.900391 10 0.900391Z"
+                    stroke="#5C5C5C" stroke-width="0.2" />
+                  <path
+                    d="M10 10.7929L7.73162 8.14645C7.56425 7.95118 7.29289 7.95118 7.12553 8.14645C6.95816 8.34171 6.95816 8.65829 7.12553 8.85355L9.69695 11.8536C9.86432 12.0488 10.1357 12.0488 10.303 11.8536L12.8745 8.85355C13.0418 8.65829 13.0418 8.34171 12.8745 8.14645C12.7071 7.95118 12.4358 7.95118 12.2684 8.14645L10 10.7929Z"
+                    fill="#565656" />
+                  <mask id="mask0_47_30" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="7" y="8" width="6"
+                    height="4" />
+                  <g mask="url(#mask0_47_30)" />
+                </svg>
+              </div>
+            </button>
+            <div class="profile-dropdown" id="profileDropdown">
+              <div class="profile-menu">
+                <a href="#" class="profile-menu-item">
+                  <img src="./images/profile.svg" alt="" />
+                  <span>Мой Аккаунт</span>
+                </a>
+                <hr class="profile-divider" />
+                <a href="#" class="profile-menu-item">
+                  <img src="./images/settings.svg" alt="" />
+                  <span>Налаштування</span>
+                </a>
+                <hr class="profile-divider" />
+                <a href="#" class="profile-menu-item">
+                  <img src="./images/subscription.svg" alt="" />
+                  <span>Преміум</span>
+                </a>
+                <hr class="profile-divider" />
+                <a href="#" class="profile-menu-item logout">
+                  <img src="./images/logout.svg" alt="" />
+                  <span>Вийти</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="manage">
+        <div class="manage__inner">
+          <button class="manage__content" id="createContentBtn">
+            <img src="./images/sidebar-circle.svg" alt="" />
+            <p>Создать контент</p>
+          </button>
+          <button class="manage__channel" id="createChannelBtn">
+            <img src="./images/sidebar-circle-2.svg" alt="" />
+            <p>Создать канал трансляции</p>
+          </button>
+          <div class="manage__trial">
+            <div class="manage__trial-left">
+              <img src="./images/warn.svg" alt="" />
+              <p>Пробный период заканчивается через 8 дней</p>
+            </div>
+            <button class="manage__trial-btn">Upgrade</button>
+          </div>
+          <div class="manage__calendar">
+            <div class="calendar-display" id="calendarDisplay">
+              <span class="calendar-date-text" id="dateRangeText">01 Авг, 2025 - 30 Сен, 2025</span>
+            </div>
+            <button class="manage__calendar-btn" id="toggleCalendar">
+              <img src="./images/calendar.svg" alt="" />
+            </button>
+            <div class="calendar-wrapper" id="calendarWrapper">
+              <div class="calendar-header">
+                <button class="calendar-nav calendar-prev" id="prevMonth">
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                    <path d="M7 1L1 7L7 13" stroke="#0284fd" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="calendar-month-year" id="monthYear">Серпень 2025</div>
+                <button class="calendar-nav calendar-next" id="nextMonth">
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                    <path d="M1 1L7 7L1 13" stroke="#0284fd" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+              <div class="calendar-body">
+                <div class="calendar-days-header">
+                  <div class="calendar-day-name">Пн</div>
+                  <div class="calendar-day-name">Вт</div>
+                  <div class="calendar-day-name">Ср</div>
+                  <div class="calendar-day-name">Чт</div>
+                  <div class="calendar-day-name">Пт</div>
+                  <div class="calendar-day-name">Сб</div>
+                  <div class="calendar-day-name">Нд</div>
+                </div>
+                <div class="calendar-dates" id="calendarDates">
+                  <!-- Дни будут сгенерированы JavaScript -->
+                </div>
+              </div>
+              <div class="calendar-footer">
+                <button class="calendar-cancel-btn" id="cancelRange">Отмена</button>
+                <button class="calendar-apply-btn" id="applyRange">Ok</button>
+              </div>
+            </div>
+          </div>
+          <div class="courses__sort-dropdown" style="display: none;" id="coursesSortContainer">
+            <button class="courses__sort-btn" id="coursesSortBtn">
+              <span class="sort-text">Сначала новые</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path
+                  d="M8.85892 2.26811L5 6.29356L1 2.26811C0.836791 1.91808 0.532503 1.91078 0.228216 2.24624C-0.076072 2.58169 -0.076072 2.90985 0.228216 3.23072L4.54357 7.78123C4.65422 7.92708 4.80636 8 5 8C5.19364 8 5.34578 7.92708 5.45643 7.78123L9.77178 3.23072C10.0761 2.90985 10.0761 2.58169 9.77178 2.24624C9.4675 1.91078 9.16321 1.91808 8.85892 2.26811Z"
+                  fill="#2B3034" fill-opacity="0.4" />
+              </svg>
+            </button>
+            <div class="courses__sort-dropdown-menu" id="coursesSortDropdown">
+              <div class="sort-option active" data-sort="newest">Сначала новые</div>
+              <div class="sort-option" data-sort="oldest">Сначала старые</div>
+              <div class="sort-option" data-sort="name">По названию</div>
+              <div class="sort-option" data-sort="status">По статусу</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info__items" id="infoItems">
+        <div class="info__item">
+          <div class="info__item-header">
+            <h3>Количество подписчиков</h3>
+            <img src="./images/person.svg" alt="" />
+          </div>
+          <p class="info__num">67,402</p>
+          <div class="info__description">
+            <div class="info__description-left">
+              <img src="./images/analytics-up.svg" alt="" />
+              <p class="info__description-text">
+                <span style="color: #15803D;">+239</span>
+                в этом месяце
+              </p>
+            </div>
+            <button class="info__description-btn">
+              <img src="./images/dots.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="info__item">
+          <div class="info__item-header">
+            <h3>Продажи</h3>
+            <img src="./images/sales.svg" alt="" />
+          </div>
+          <p class="info__num">2,892</p>
+          <div class="info__description">
+            <div class="info__description-left">
+              <img src="./images/analytics-up.svg" alt="" />
+              <p class="info__description-text">
+                <span style="color: #15803D;">+608</span>
+                в этом месяце
+              </p>
+            </div>
+            <button class="info__description-btn">
+              <img src="./images/dots.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="info__item">
+          <div class="info__item-header">
+            <h3>Активность</h3>
+            <img src="./images/activity.svg" alt="" />
+          </div>
+          <p class="info__num">29,087</p>
+          <div class="info__description">
+            <div class="info__description-left">
+              <img src="./images/analytics-down.svg" alt="" />
+              <p class="info__description-text">
+                <span style="color: #FE5C73;">-2 608</span>
+                в этом месяце
+              </p>
+            </div>
+            <button class="info__description-btn">
+              <img src="./images/dots.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="info__item">
+          <div class="info__item-header">
+            <h3>Доход</h3>
+            <img src="./images/income.svg" alt="" />
+          </div>
+          <p class="info__num">388,453</p>
+          <div class="info__description">
+            <div class="info__description-left">
+              <img src="./images/analytics-up.svg" alt="" />
+              <p class="info__description-text">
+                <span style="color: #15803D;">+120%</span>
+                в этом месяце
+              </p>
+            </div>
+            <button class="info__description-btn">
+              <img src="./images/dots.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Chart Section with Custom SVG Diagrams -->
+      <div class="chart-section" id="chartSection">
+        <div class="chart-header">
+          <h3 class="chart-title">Аналитика трафика</h3>
+          <div class="chart-period-dropdown">
+            <button class="chart-period-btn" id="chartPeriodBtn">
+              <span class="period-text" id="periodText">Сентябрь</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path
+                  d="M8.85892 2.26811L5 6.29356L1.14108 2.26811C0.836791 1.91808 0.532503 1.91078 0.228216 2.24624C-0.076072 2.58169 -0.076072 2.90985 0.228216 3.23072L4.54357 7.78123C4.65422 7.92708 4.80636 8 5 8C5.19364 8 5.34578 7.92708 5.45643 7.78123L9.77178 3.23072C10.0761 2.90985 10.0761 2.58169 9.77178 2.24624C9.4675 1.91078 9.16321 1.91808 8.85892 2.26811Z"
+                  fill="#2B3034" fill-opacity="0.4" />
+              </svg>
+            </button>
+            <div class="chart-period-dropdown-menu" id="chartPeriodDropdown">
+              <div class="period-option active" data-period="Сентябрь">Сентябрь</div>
+              <div class="period-option" data-period="Август">Август</div>
+              <div class="period-option" data-period="Июль">Июль</div>
+              <div class="period-option" data-period="Июнь">Июнь</div>
+              <div class="period-option" data-period="Май">Май</div>
+              <div class="period-option" data-period="Апрель">Апрель</div>
+              <div class="period-option" data-period="Март">Март</div>
+              <div class="period-option" data-period="Февраль">Февраль</div>
+              <div class="period-option" data-period="Январь">Январь</div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-y-axis">
+            <div class="y-axis-label">100%</div>
+            <div class="y-axis-label">80%</div>
+            <div class="y-axis-label">60%</div>
+            <div class="y-axis-label">40%</div>
+            <div class="y-axis-label">20%</div>
+            <div class="y-axis-label">0%</div>
+          </div>
+          <div class="chart-main">
+            <div class="svg-chart-container">
+              <svg class="custom-chart" viewBox="0 0 1000 210" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#6DBBFF;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#6DBBFF;stop-opacity:0.2" />
+                  </linearGradient>
+                  <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#DBA5FF;stop-opacity:0.78" />
+                    <stop offset="100%" style="stop-color:#DBA5FF;stop-opacity:0.3" />
+                  </linearGradient>
+                </defs>
+                <!-- Blue chart based on blue-diagram.svg -->
+                <path
+                  d="M0 209C0 209 54.625 169.402 100.585 169.402C146.544 169.402 149.613 187.569 233.062 187.569C316.51 187.569 346.503 104.5 361.71 104.5C376.917 104.5 378.091 169.402 418.484 169.402C463.765 169.402 495.53 0 528.808 0C571.011 0 593.303 152.453 631.259 152.453C669.215 152.453 692.46 71.5756 731.199 71.5756C765.601 71.5756 789.935 155.372 814.605 164.811C840.634 174.769 852.624 95.5418 901.562 95.5418C950.5 95.5418 998 209 998 209H0Z"
+                  fill="url(#blueGradient)" class="chart-path chart-path--blue" />
+                <!-- Purple chart based on purple-diagram.svg -->
+                <path
+                  d="M0 209.867C0 209.867 60.5256 60.277 84.8339 60.277C109.142 60.277 163.891 171.709 224.485 171.709C285.078 171.709 304.218 132.985 382.321 117.499C460.424 102.012 465.085 190.477 503.739 190.477C542.392 190.477 600.195 97.7729 628.32 97.7729C654.944 97.7729 664.861 190.477 746.761 190.477C828.661 190.477 879.755 0.867188 916.874 0.867188C953.994 0.867188 994 209.867 994 209.867H0Z"
+                  fill="url(#purpleGradient)" class="chart-path chart-path--purple" />
+              </svg>
+            </div>
+            <div class="chart-x-axis">
+              <div class="x-axis-label">1 сен</div>
+              <div class="x-axis-label">5 сен</div>
+              <div class="x-axis-label">10 сен</div>
+              <div class="x-axis-label">15 сен</div>
+              <div class="x-axis-label">20 сен</div>
+              <div class="x-axis-label">25 сен</div>
+              <div class="x-axis-label">30 сен</div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--blue"></span>
+            <span class="legend-text">Подписчики</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--purple"></span>
+            <span class="legend-text">Клиенты</span>
+          </div>
+        </div>
+      </div>
+      <div class="courses" style="display: none;">
+        <div class="courses__items">
+          <a class="courses__item" href="#">
+            <img src="./images/courses-1.png" alt="" />
+            <p class="courses__title">Курс Супер Иллюстратор</p>
+            <div class="courses__info">
+              <div class="courses__info-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                  <path
+                    d="M10.5 9.53334V11H0V9.53334C0 9.53334 0 6.60001 5.25 6.60001C10.5 6.60001 10.5 9.53334 10.5 9.53334ZM7.875 2.56669C7.875 2.05905 7.72105 1.56281 7.43261 1.14073C7.14417 0.718642 6.7342 0.389667 6.25454 0.195402C5.77489 0.00113805 5.24709 -0.0496904 4.73789 0.0493448C4.22869 0.14838 3.76096 0.392831 3.39384 0.751785C3.02673 1.11074 2.77673 1.56807 2.67544 2.06596C2.57415 2.56384 2.62614 3.07991 2.82482 3.54891C3.0235 4.0179 3.35995 4.41876 3.79163 4.70079C4.22331 4.98282 4.73082 5.13335 5.25 5.13335C5.94619 5.13335 6.61387 4.86293 7.10616 4.38159C7.59844 3.90025 7.875 3.24741 7.875 2.56669ZM10.455 6.60001C10.9161 6.94889 11.2933 7.39233 11.5603 7.89911C11.8272 8.4059 11.9773 8.96373 12 9.53334V11H15V9.53334C15 9.53334 15 6.87134 10.455 6.60001ZM9.75 2.6984e-05C9.23384 -0.00232051 8.72909 0.148549 8.3025 0.432693C8.75808 1.0551 9.00304 1.8013 9.00304 2.56669C9.00304 3.33208 8.75808 4.07828 8.3025 4.70068C8.72909 4.98483 9.23384 5.13569 9.75 5.13335C10.4462 5.13335 11.1139 4.86293 11.6062 4.38159C12.0984 3.90025 12.375 3.24741 12.375 2.56669C12.375 1.88597 12.0984 1.23313 11.6062 0.751785C11.1139 0.270442 10.4462 2.6984e-05 9.75 2.6984e-05ZM4.75 12.9655C4.75 11.0603 6.42812 9.51724 8.5 9.51724C10.5719 9.51724 12.25 11.0603 12.25 12.9655V13.3103C12.25 13.6918 11.9148 14 11.5 14H5.5C5.08516 14 4.75 13.6918 4.75 13.3103V12.9655Z"
+                    fill="black" />
+                </svg>
+                <p class="courses__number">313 928</p>
+              </div>
+              <div class="courses__status active">
+                Активен
+              </div>
+            </div>
+            <div class="courses__btn-container">
+              <div class="courses__btn-wrapper"><button class="courses__btn">Меню</button></div>
+              <div class="menu-add">
+                <div class="menu-add-inner">
+                  <div class="menu__left">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M11.2433 2.75652C11.0576 2.57072 10.8371 2.42333 10.5943 2.32277C10.3516 2.22221 10.0915 2.17045 9.82879 2.17045C9.56608 2.17045 9.30595 2.22221 9.06324 2.32277C8.82054 2.42333 8.60002 2.57072 8.41429 2.75652L6.29329 4.87952L4.87929 3.46352L7.00029 1.34352C7.37173 0.972065 7.8127 0.677408 8.29801 0.476377C8.78333 0.275345 9.30349 0.171875 9.82879 0.171875C10.3541 0.171875 10.8743 0.275345 11.3596 0.476377C11.8449 0.677408 12.2859 0.972065 12.6573 1.34352L13.3643 2.04952L13.2743 2.13952C13.7249 2.90329 13.9088 3.79513 13.7973 4.67485C13.6858 5.55458 13.2852 6.37231 12.6583 6.99952L10.5373 9.12052L9.12229 7.70652L11.2443 5.58552C11.4301 5.39979 11.5775 5.17928 11.678 4.93657C11.7786 4.69387 11.8304 4.43373 11.8304 4.17102C11.8304 3.90831 11.7786 3.64817 11.678 3.40547C11.5775 3.16276 11.4301 2.94225 11.2443 2.75652H11.2433ZM2.75729 11.2425C2.94302 11.4283 3.16354 11.5757 3.40624 11.6763C3.64894 11.7768 3.90908 11.8286 4.17179 11.8286C4.43451 11.8286 4.69464 11.7768 4.93735 11.6763C5.18005 11.5757 5.40057 11.4283 5.58629 11.2425L7.70729 9.12052L9.12129 10.5355L7.00029 12.6545C6.62886 13.026 6.18789 13.3206 5.70258 13.5217C5.21726 13.7227 4.6971 13.8262 4.17179 13.8262C3.64649 13.8262 3.12633 13.7227 2.64101 13.5217C2.1557 13.3206 1.71473 13.026 1.34329 12.6545L0.636295 11.9485L0.726295 11.8585C0.275988 11.0949 0.0921426 10.2032 0.203642 9.32372C0.315142 8.44421 0.715668 7.62666 1.34229 6.99952L3.46329 4.87852L4.88029 6.29252L2.75729 8.41352C2.57149 8.59925 2.4241 8.81976 2.32354 9.06247C2.22298 9.30517 2.17122 9.56531 2.17122 9.82802C2.17122 10.0907 2.22298 10.3509 2.32354 10.5936C2.4241 10.8363 2.57149 11.0568 2.75729 11.2425Z"
+                          fill="white" />
+                        <path d="M9.82788 5.58588L8.41387 4.17188L4.17188 8.41387L5.58588 9.82788L9.82788 5.58588Z"
+                          fill="white" />
+                      </svg>
+                      Получить ссылку
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+                        <path
+                          d="M8.56873 1C4.46727 1 2.18827 4.18986 1.37837 5.60774C1.21187 5.89855 1.129 6.04471 1.13728 6.26168C1.14708 6.47866 1.24502 6.6203 1.44015 6.90357C2.40449 8.30337 5.02328 11.5475 8.56873 11.5475C12.1142 11.5475 14.733 8.30337 15.6973 6.90357C15.8932 6.6203 15.9911 6.47866 15.9994 6.26168C16.0077 6.04471 15.9256 5.89855 15.7591 5.60774C14.95 4.18986 12.6702 1 8.56873 1Z"
+                          stroke="white" stroke-width="2" />
+                        <path
+                          d="M8.56825 9.28689C10.2326 9.28689 11.5818 7.93768 11.5818 6.27333C11.5818 4.60898 10.2326 3.25977 8.56825 3.25977C6.90391 3.25977 5.55469 4.60898 5.55469 6.27333C5.55469 7.93768 6.90391 9.28689 8.56825 9.28689Z"
+                          fill="white" />
+                      </svg>
+                      Предпросмотр
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0ZM5.35714 4.82143C5.21506 4.82143 5.0788 4.87787 4.97834 4.97834C4.87787 5.0788 4.82143 5.21506 4.82143 5.35714V9.64286C4.82143 9.78494 4.87787 9.9212 4.97834 10.0217C5.0788 10.1221 5.21506 10.1786 5.35714 10.1786H9.64286C9.78494 10.1786 9.9212 10.1221 10.0217 10.0217C10.1221 9.9212 10.1786 9.78494 10.1786 9.64286V5.35714C10.1786 5.21506 10.1221 5.0788 10.0217 4.97834C9.9212 4.87787 9.78494 4.82143 9.64286 4.82143H5.35714Z"
+                          fill="white" />
+                      </svg>
+                      Остановить
+                  </div>
+                  <img src="./images/bar.svg" alt="">
+                  <div class="menu__right">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                        <path
+                          d="M7 0L14 3.75034V11.2497L7 15L0 11.2497V3.75034L7 0ZM7 1.55312L1.44928 4.52622V10.4738L7 13.4469L12.5507 10.4738V4.52622L7 1.55312ZM7 5.48297C6.42344 5.48297 5.8705 5.69547 5.46281 6.07374C5.05512 6.45201 4.82609 6.96505 4.82609 7.5C4.82609 8.03495 5.05512 8.54799 5.46281 8.92626C5.8705 9.30452 6.42344 9.51703 7 9.51703C7.57656 9.51703 8.1295 9.30452 8.53719 8.92626C8.94488 8.54799 9.17391 8.03495 9.17391 7.5C9.17391 6.96505 8.94488 6.45201 8.53719 6.07374C8.1295 5.69547 7.57656 5.48297 7 5.48297ZM3.37681 7.5C3.37681 6.60842 3.75854 5.75335 4.43802 5.1229C5.1175 4.49246 6.03907 4.13828 7 4.13828C7.96093 4.13828 8.8825 4.49246 9.56198 5.1229C10.2415 5.75335 10.6232 6.60842 10.6232 7.5C10.6232 8.39158 10.2415 9.24665 9.56198 9.8771C8.8825 10.5075 7.96093 10.8617 7 10.8617C6.03907 10.8617 5.1175 10.5075 4.43802 9.8771C3.75854 9.24665 3.37681 8.39158 3.37681 7.5Z"
+                          fill="white" />
+                      </svg>
+                      Настройки
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M9.625 0H0V9.625H2.625V7.875H1.75V1.75H7.875V2.625H9.625V0Z" fill="white" />
+                        <path d="M14 4.375H4.375V14H14V4.375ZM6.125 12.25V6.125H12.25V12.25H6.125Z" fill="white" />
+                      </svg>
+                      Дублировать
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                        <path
+                          d="M2.25 14C1.8375 14 1.4845 13.8478 1.191 13.5434C0.8975 13.2391 0.7505 12.8727 0.75 12.4444V2.33333H0V0.777778H3.75V0H8.25V0.777778H12V2.33333H11.25V12.4444C11.25 12.8722 11.1033 13.2386 10.8097 13.5434C10.5162 13.8483 10.163 14.0005 9.75 14H2.25ZM9.75 2.33333H2.25V12.4444H9.75V2.33333ZM3.75 10.8889H5.25V3.88889H3.75V10.8889ZM6.75 10.8889H8.25V3.88889H6.75V10.8889Z"
+                          fill="white" />
+                      </svg>
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="courses__item" href="#">
+            <img src="./images/courses-2.png" alt="" />
+            <p class="courses__title">Курс adobe premere pro 2024</p>
+            <div class="courses__info">
+              <div class="courses__info-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                  <path
+                    d="M10.5 9.53334V11H0V9.53334C0 9.53334 0 6.60001 5.25 6.60001C10.5 6.60001 10.5 9.53334 10.5 9.53334ZM7.875 2.56669C7.875 2.05905 7.72105 1.56281 7.43261 1.14073C7.14417 0.718642 6.7342 0.389667 6.25454 0.195402C5.77489 0.00113805 5.24709 -0.0496904 4.73789 0.0493448C4.22869 0.14838 3.76096 0.392831 3.39384 0.751785C3.02673 1.11074 2.77673 1.56807 2.67544 2.06596C2.57415 2.56384 2.62614 3.07991 2.82482 3.54891C3.0235 4.0179 3.35995 4.41876 3.79163 4.70079C4.22331 4.98282 4.73082 5.13335 5.25 5.13335C5.94619 5.13335 6.61387 4.86293 7.10616 4.38159C7.59844 3.90025 7.875 3.24741 7.875 2.56669ZM10.455 6.60001C10.9161 6.94889 11.2933 7.39233 11.5603 7.89911C11.8272 8.4059 11.9773 8.96373 12 9.53334V11H15V9.53334C15 9.53334 15 6.87134 10.455 6.60001ZM9.75 2.6984e-05C9.23384 -0.00232051 8.72909 0.148549 8.3025 0.432693C8.75808 1.0551 9.00304 1.8013 9.00304 2.56669C9.00304 3.33208 8.75808 4.07828 8.3025 4.70068C8.72909 4.98483 9.23384 5.13569 9.75 5.13335C10.4462 5.13335 11.1139 4.86293 11.6062 4.38159C12.0984 3.90025 12.375 3.24741 12.375 2.56669C12.375 1.88597 12.0984 1.23313 11.6062 0.751785C11.1139 0.270442 10.4462 2.6984e-05 9.75 2.6984e-05ZM4.75 12.9655C4.75 11.0603 6.42812 9.51724 8.5 9.51724C10.5719 9.51724 12.25 11.0603 12.25 12.9655V13.3103C12.25 13.6918 11.9148 14 11.5 14H5.5C5.08516 14 4.75 13.6918 4.75 13.3103V12.9655Z"
+                    fill="black" />
+                </svg>
+                <p class="courses__number">313 928</p>
+              </div>
+              <div class="courses__status active">
+                Активен
+              </div>
+            </div>
+            <div class="courses__btn-container">
+              <div class="courses__btn-wrapper"><button class="courses__btn">Меню</button></div>
+              <div class="menu-add">
+                <div class="menu-add-inner">
+                  <div class="menu__left">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M11.2433 2.75652C11.0576 2.57072 10.8371 2.42333 10.5943 2.32277C10.3516 2.22221 10.0915 2.17045 9.82879 2.17045C9.56608 2.17045 9.30595 2.22221 9.06324 2.32277C8.82054 2.42333 8.60002 2.57072 8.41429 2.75652L6.29329 4.87952L4.87929 3.46352L7.00029 1.34352C7.37173 0.972065 7.8127 0.677408 8.29801 0.476377C8.78333 0.275345 9.30349 0.171875 9.82879 0.171875C10.3541 0.171875 10.8743 0.275345 11.3596 0.476377C11.8449 0.677408 12.2859 0.972065 12.6573 1.34352L13.3643 2.04952L13.2743 2.13952C13.7249 2.90329 13.9088 3.79513 13.7973 4.67485C13.6858 5.55458 13.2852 6.37231 12.6583 6.99952L10.5373 9.12052L9.12229 7.70652L11.2443 5.58552C11.4301 5.39979 11.5775 5.17928 11.678 4.93657C11.7786 4.69387 11.8304 4.43373 11.8304 4.17102C11.8304 3.90831 11.7786 3.64817 11.678 3.40547C11.5775 3.16276 11.4301 2.94225 11.2443 2.75652H11.2433ZM2.75729 11.2425C2.94302 11.4283 3.16354 11.5757 3.40624 11.6763C3.64894 11.7768 3.90908 11.8286 4.17179 11.8286C4.43451 11.8286 4.69464 11.7768 4.93735 11.6763C5.18005 11.5757 5.40057 11.4283 5.58629 11.2425L7.70729 9.12052L9.12129 10.5355L7.00029 12.6545C6.62886 13.026 6.18789 13.3206 5.70258 13.5217C5.21726 13.7227 4.6971 13.8262 4.17179 13.8262C3.64649 13.8262 3.12633 13.7227 2.64101 13.5217C2.1557 13.3206 1.71473 13.026 1.34329 12.6545L0.636295 11.9485L0.726295 11.8585C0.275988 11.0949 0.0921426 10.2032 0.203642 9.32372C0.315142 8.44421 0.715668 7.62666 1.34229 6.99952L3.46329 4.87852L4.88029 6.29252L2.75729 8.41352C2.57149 8.59925 2.4241 8.81976 2.32354 9.06247C2.22298 9.30517 2.17122 9.56531 2.17122 9.82802C2.17122 10.0907 2.22298 10.3509 2.32354 10.5936C2.4241 10.8363 2.57149 11.0568 2.75729 11.2425Z"
+                          fill="white" />
+                        <path d="M9.82788 5.58588L8.41387 4.17188L4.17188 8.41387L5.58588 9.82788L9.82788 5.58588Z"
+                          fill="white" />
+                      </svg>
+                      Получить ссылку
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+                        <path
+                          d="M8.56873 1C4.46727 1 2.18827 4.18986 1.37837 5.60774C1.21187 5.89855 1.129 6.04471 1.13728 6.26168C1.14708 6.47866 1.24502 6.6203 1.44015 6.90357C2.40449 8.30337 5.02328 11.5475 8.56873 11.5475C12.1142 11.5475 14.733 8.30337 15.6973 6.90357C15.8932 6.6203 15.9911 6.47866 15.9994 6.26168C16.0077 6.04471 15.9256 5.89855 15.7591 5.60774C14.95 4.18986 12.6702 1 8.56873 1Z"
+                          stroke="white" stroke-width="2" />
+                        <path
+                          d="M8.56825 9.28689C10.2326 9.28689 11.5818 7.93768 11.5818 6.27333C11.5818 4.60898 10.2326 3.25977 8.56825 3.25977C6.90391 3.25977 5.55469 4.60898 5.55469 6.27333C5.55469 7.93768 6.90391 9.28689 8.56825 9.28689Z"
+                          fill="white" />
+                      </svg>
+                      Предпросмотр
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0ZM5.35714 4.82143C5.21506 4.82143 5.0788 4.87787 4.97834 4.97834C4.87787 5.0788 4.82143 5.21506 4.82143 5.35714V9.64286C4.82143 9.78494 4.87787 9.9212 4.97834 10.0217C5.0788 10.1221 5.21506 10.1786 5.35714 10.1786H9.64286C9.78494 10.1786 9.9212 10.1221 10.0217 10.0217C10.1221 9.9212 10.1786 9.78494 10.1786 9.64286V5.35714C10.1786 5.21506 10.1221 5.0788 10.0217 4.97834C9.9212 4.87787 9.78494 4.82143 9.64286 4.82143H5.35714Z"
+                          fill="white" />
+                      </svg>
+                      Остановить
+                  </div>
+                  <img src="./images/bar.svg" alt="">
+                  <div class="menu__right">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                        <path
+                          d="M7 0L14 3.75034V11.2497L7 15L0 11.2497V3.75034L7 0ZM7 1.55312L1.44928 4.52622V10.4738L7 13.4469L12.5507 10.4738V4.52622L7 1.55312ZM7 5.48297C6.42344 5.48297 5.8705 5.69547 5.46281 6.07374C5.05512 6.45201 4.82609 6.96505 4.82609 7.5C4.82609 8.03495 5.05512 8.54799 5.46281 8.92626C5.8705 9.30452 6.42344 9.51703 7 9.51703C7.57656 9.51703 8.1295 9.30452 8.53719 8.92626C8.94488 8.54799 9.17391 8.03495 9.17391 7.5C9.17391 6.96505 8.94488 6.45201 8.53719 6.07374C8.1295 5.69547 7.57656 5.48297 7 5.48297ZM3.37681 7.5C3.37681 6.60842 3.75854 5.75335 4.43802 5.1229C5.1175 4.49246 6.03907 4.13828 7 4.13828C7.96093 4.13828 8.8825 4.49246 9.56198 5.1229C10.2415 5.75335 10.6232 6.60842 10.6232 7.5C10.6232 8.39158 10.2415 9.24665 9.56198 9.8771C8.8825 10.5075 7.96093 10.8617 7 10.8617C6.03907 10.8617 5.1175 10.5075 4.43802 9.8771C3.75854 9.24665 3.37681 8.39158 3.37681 7.5Z"
+                          fill="white" />
+                      </svg>
+                      Настройки
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M9.625 0H0V9.625H2.625V7.875H1.75V1.75H7.875V2.625H9.625V0Z" fill="white" />
+                        <path d="M14 4.375H4.375V14H14V4.375ZM6.125 12.25V6.125H12.25V12.25H6.125Z" fill="white" />
+                      </svg>
+                      Дублировать
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                        <path
+                          d="M2.25 14C1.8375 14 1.4845 13.8478 1.191 13.5434C0.8975 13.2391 0.7505 12.8727 0.75 12.4444V2.33333H0V0.777778H3.75V0H8.25V0.777778H12V2.33333H11.25V12.4444C11.25 12.8722 11.1033 13.2386 10.8097 13.5434C10.5162 13.8483 10.163 14.0005 9.75 14H2.25ZM9.75 2.33333H2.25V12.4444H9.75V2.33333ZM3.75 10.8889H5.25V3.88889H3.75V10.8889ZM6.75 10.8889H8.25V3.88889H6.75V10.8889Z"
+                          fill="white" />
+                      </svg>
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="courses__item" href="#">
+            <img src="./images/courses-3.png" alt="" />
+            <p class="courses__title">Курс adobe premere pro 2024</p>
+            <div class="courses__info">
+              <div class="courses__info-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                  <path
+                    d="M10.5 9.53334V11H0V9.53334C0 9.53334 0 6.60001 5.25 6.60001C10.5 6.60001 10.5 9.53334 10.5 9.53334ZM7.875 2.56669C7.875 2.05905 7.72105 1.56281 7.43261 1.14073C7.14417 0.718642 6.7342 0.389667 6.25454 0.195402C5.77489 0.00113805 5.24709 -0.0496904 4.73789 0.0493448C4.22869 0.14838 3.76096 0.392831 3.39384 0.751785C3.02673 1.11074 2.77673 1.56807 2.67544 2.06596C2.57415 2.56384 2.62614 3.07991 2.82482 3.54891C3.0235 4.0179 3.35995 4.41876 3.79163 4.70079C4.22331 4.98282 4.73082 5.13335 5.25 5.13335C5.94619 5.13335 6.61387 4.86293 7.10616 4.38159C7.59844 3.90025 7.875 3.24741 7.875 2.56669ZM10.455 6.60001C10.9161 6.94889 11.2933 7.39233 11.5603 7.89911C11.8272 8.4059 11.9773 8.96373 12 9.53334V11H15V9.53334C15 9.53334 15 6.87134 10.455 6.60001ZM9.75 2.6984e-05C9.23384 -0.00232051 8.72909 0.148549 8.3025 0.432693C8.75808 1.0551 9.00304 1.8013 9.00304 2.56669C9.00304 3.33208 8.75808 4.07828 8.3025 4.70068C8.72909 4.98483 9.23384 5.13569 9.75 5.13335C10.4462 5.13335 11.1139 4.86293 11.6062 4.38159C12.0984 3.90025 12.375 3.24741 12.375 2.56669C12.375 1.88597 12.0984 1.23313 11.6062 0.751785C11.1139 0.270442 10.4462 2.6984e-05 9.75 2.6984e-05ZM4.75 12.9655C4.75 11.0603 6.42812 9.51724 8.5 9.51724C10.5719 9.51724 12.25 11.0603 12.25 12.9655V13.3103C12.25 13.6918 11.9148 14 11.5 14H5.5C5.08516 14 4.75 13.6918 4.75 13.3103V12.9655Z"
+                    fill="black" />
+                </svg>
+                <p class="courses__number">313 928</p>
+              </div>
+              <div class="courses__status inactive">
+                Активен
+              </div>
+            </div>
+            <div class="courses__btn-container">
+              <div class="courses__btn-wrapper"><button class="courses__btn">Меню</button></div>
+              <div class="menu-add">
+                <div class="menu-add-inner">
+                  <div class="menu__left">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M11.2433 2.75652C11.0576 2.57072 10.8371 2.42333 10.5943 2.32277C10.3516 2.22221 10.0915 2.17045 9.82879 2.17045C9.56608 2.17045 9.30595 2.22221 9.06324 2.32277C8.82054 2.42333 8.60002 2.57072 8.41429 2.75652L6.29329 4.87952L4.87929 3.46352L7.00029 1.34352C7.37173 0.972065 7.8127 0.677408 8.29801 0.476377C8.78333 0.275345 9.30349 0.171875 9.82879 0.171875C10.3541 0.171875 10.8743 0.275345 11.3596 0.476377C11.8449 0.677408 12.2859 0.972065 12.6573 1.34352L13.3643 2.04952L13.2743 2.13952C13.7249 2.90329 13.9088 3.79513 13.7973 4.67485C13.6858 5.55458 13.2852 6.37231 12.6583 6.99952L10.5373 9.12052L9.12229 7.70652L11.2443 5.58552C11.4301 5.39979 11.5775 5.17928 11.678 4.93657C11.7786 4.69387 11.8304 4.43373 11.8304 4.17102C11.8304 3.90831 11.7786 3.64817 11.678 3.40547C11.5775 3.16276 11.4301 2.94225 11.2443 2.75652H11.2433ZM2.75729 11.2425C2.94302 11.4283 3.16354 11.5757 3.40624 11.6763C3.64894 11.7768 3.90908 11.8286 4.17179 11.8286C4.43451 11.8286 4.69464 11.7768 4.93735 11.6763C5.18005 11.5757 5.40057 11.4283 5.58629 11.2425L7.70729 9.12052L9.12129 10.5355L7.00029 12.6545C6.62886 13.026 6.18789 13.3206 5.70258 13.5217C5.21726 13.7227 4.6971 13.8262 4.17179 13.8262C3.64649 13.8262 3.12633 13.7227 2.64101 13.5217C2.1557 13.3206 1.71473 13.026 1.34329 12.6545L0.636295 11.9485L0.726295 11.8585C0.275988 11.0949 0.0921426 10.2032 0.203642 9.32372C0.315142 8.44421 0.715668 7.62666 1.34229 6.99952L3.46329 4.87852L4.88029 6.29252L2.75729 8.41352C2.57149 8.59925 2.4241 8.81976 2.32354 9.06247C2.22298 9.30517 2.17122 9.56531 2.17122 9.82802C2.17122 10.0907 2.22298 10.3509 2.32354 10.5936C2.4241 10.8363 2.57149 11.0568 2.75729 11.2425Z"
+                          fill="white" />
+                        <path d="M9.82788 5.58588L8.41387 4.17188L4.17188 8.41387L5.58588 9.82788L9.82788 5.58588Z"
+                          fill="white" />
+                      </svg>
+                      Получить ссылку
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+                        <path
+                          d="M8.56873 1C4.46727 1 2.18827 4.18986 1.37837 5.60774C1.21187 5.89855 1.129 6.04471 1.13728 6.26168C1.14708 6.47866 1.24502 6.6203 1.44015 6.90357C2.40449 8.30337 5.02328 11.5475 8.56873 11.5475C12.1142 11.5475 14.733 8.30337 15.6973 6.90357C15.8932 6.6203 15.9911 6.47866 15.9994 6.26168C16.0077 6.04471 15.9256 5.89855 15.7591 5.60774C14.95 4.18986 12.6702 1 8.56873 1Z"
+                          stroke="white" stroke-width="2" />
+                        <path
+                          d="M8.56825 9.28689C10.2326 9.28689 11.5818 7.93768 11.5818 6.27333C11.5818 4.60898 10.2326 3.25977 8.56825 3.25977C6.90391 3.25977 5.55469 4.60898 5.55469 6.27333C5.55469 7.93768 6.90391 9.28689 8.56825 9.28689Z"
+                          fill="white" />
+                      </svg>
+                      Предпросмотр
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0ZM5.35714 4.82143C5.21506 4.82143 5.0788 4.87787 4.97834 4.97834C4.87787 5.0788 4.82143 5.21506 4.82143 5.35714V9.64286C4.82143 9.78494 4.87787 9.9212 4.97834 10.0217C5.0788 10.1221 5.21506 10.1786 5.35714 10.1786H9.64286C9.78494 10.1786 9.9212 10.1221 10.0217 10.0217C10.1221 9.9212 10.1786 9.78494 10.1786 9.64286V5.35714C10.1786 5.21506 10.1221 5.0788 10.0217 4.97834C9.9212 4.87787 9.78494 4.82143 9.64286 4.82143H5.35714Z"
+                          fill="white" />
+                      </svg>
+                      Остановить
+                  </div>
+                  <img src="./images/bar.svg" alt="">
+                  <div class="menu__right">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                        <path
+                          d="M7 0L14 3.75034V11.2497L7 15L0 11.2497V3.75034L7 0ZM7 1.55312L1.44928 4.52622V10.4738L7 13.4469L12.5507 10.4738V4.52622L7 1.55312ZM7 5.48297C6.42344 5.48297 5.8705 5.69547 5.46281 6.07374C5.05512 6.45201 4.82609 6.96505 4.82609 7.5C4.82609 8.03495 5.05512 8.54799 5.46281 8.92626C5.8705 9.30452 6.42344 9.51703 7 9.51703C7.57656 9.51703 8.1295 9.30452 8.53719 8.92626C8.94488 8.54799 9.17391 8.03495 9.17391 7.5C9.17391 6.96505 8.94488 6.45201 8.53719 6.07374C8.1295 5.69547 7.57656 5.48297 7 5.48297ZM3.37681 7.5C3.37681 6.60842 3.75854 5.75335 4.43802 5.1229C5.1175 4.49246 6.03907 4.13828 7 4.13828C7.96093 4.13828 8.8825 4.49246 9.56198 5.1229C10.2415 5.75335 10.6232 6.60842 10.6232 7.5C10.6232 8.39158 10.2415 9.24665 9.56198 9.8771C8.8825 10.5075 7.96093 10.8617 7 10.8617C6.03907 10.8617 5.1175 10.5075 4.43802 9.8771C3.75854 9.24665 3.37681 8.39158 3.37681 7.5Z"
+                          fill="white" />
+                      </svg>
+                      Настройки
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M9.625 0H0V9.625H2.625V7.875H1.75V1.75H7.875V2.625H9.625V0Z" fill="white" />
+                        <path d="M14 4.375H4.375V14H14V4.375ZM6.125 12.25V6.125H12.25V12.25H6.125Z" fill="white" />
+                      </svg>
+                      Дублировать
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                        <path
+                          d="M2.25 14C1.8375 14 1.4845 13.8478 1.191 13.5434C0.8975 13.2391 0.7505 12.8727 0.75 12.4444V2.33333H0V0.777778H3.75V0H8.25V0.777778H12V2.33333H11.25V12.4444C11.25 12.8722 11.1033 13.2386 10.8097 13.5434C10.5162 13.8483 10.163 14.0005 9.75 14H2.25ZM9.75 2.33333H2.25V12.4444H9.75V2.33333ZM3.75 10.8889H5.25V3.88889H3.75V10.8889ZM6.75 10.8889H8.25V3.88889H6.75V10.8889Z"
+                          fill="white" />
+                      </svg>
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="courses__item" href="#">
+            <img src="./images/courses-2.png" alt="" />
+            <p class="courses__title">Курс adobe premere pro 2024</p>
+            <div class="courses__info">
+              <div class="courses__info-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                  <path
+                    d="M10.5 9.53334V11H0V9.53334C0 9.53334 0 6.60001 5.25 6.60001C10.5 6.60001 10.5 9.53334 10.5 9.53334ZM7.875 2.56669C7.875 2.05905 7.72105 1.56281 7.43261 1.14073C7.14417 0.718642 6.7342 0.389667 6.25454 0.195402C5.77489 0.00113805 5.24709 -0.0496904 4.73789 0.0493448C4.22869 0.14838 3.76096 0.392831 3.39384 0.751785C3.02673 1.11074 2.77673 1.56807 2.67544 2.06596C2.57415 2.56384 2.62614 3.07991 2.82482 3.54891C3.0235 4.0179 3.35995 4.41876 3.79163 4.70079C4.22331 4.98282 4.73082 5.13335 5.25 5.13335C5.94619 5.13335 6.61387 4.86293 7.10616 4.38159C7.59844 3.90025 7.875 3.24741 7.875 2.56669ZM10.455 6.60001C10.9161 6.94889 11.2933 7.39233 11.5603 7.89911C11.8272 8.4059 11.9773 8.96373 12 9.53334V11H15V9.53334C15 9.53334 15 6.87134 10.455 6.60001ZM9.75 2.6984e-05C9.23384 -0.00232051 8.72909 0.148549 8.3025 0.432693C8.75808 1.0551 9.00304 1.8013 9.00304 2.56669C9.00304 3.33208 8.75808 4.07828 8.3025 4.70068C8.72909 4.98483 9.23384 5.13569 9.75 5.13335C10.4462 5.13335 11.1139 4.86293 11.6062 4.38159C12.0984 3.90025 12.375 3.24741 12.375 2.56669C12.375 1.88597 12.0984 1.23313 11.6062 0.751785C11.1139 0.270442 10.4462 2.6984e-05 9.75 2.6984e-05ZM4.75 12.9655C4.75 11.0603 6.42812 9.51724 8.5 9.51724C10.5719 9.51724 12.25 11.0603 12.25 12.9655V13.3103C12.25 13.6918 11.9148 14 11.5 14H5.5C5.08516 14 4.75 13.6918 4.75 13.3103V12.9655Z"
+                    fill="black" />
+                </svg>
+                <p class="courses__number">313 928</p>
+              </div>
+              <div class="courses__status active">
+                Активен
+              </div>
+            </div>
+            <div class="courses__btn-container">
+              <div class="courses__btn-wrapper"><button class="courses__btn">Меню</button></div>
+              <div class="menu-add">
+                <div class="menu-add-inner">
+                  <div class="menu__left">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M11.2433 2.75652C11.0576 2.57072 10.8371 2.42333 10.5943 2.32277C10.3516 2.22221 10.0915 2.17045 9.82879 2.17045C9.56608 2.17045 9.30595 2.22221 9.06324 2.32277C8.82054 2.42333 8.60002 2.57072 8.41429 2.75652L6.29329 4.87952L4.87929 3.46352L7.00029 1.34352C7.37173 0.972065 7.8127 0.677408 8.29801 0.476377C8.78333 0.275345 9.30349 0.171875 9.82879 0.171875C10.3541 0.171875 10.8743 0.275345 11.3596 0.476377C11.8449 0.677408 12.2859 0.972065 12.6573 1.34352L13.3643 2.04952L13.2743 2.13952C13.7249 2.90329 13.9088 3.79513 13.7973 4.67485C13.6858 5.55458 13.2852 6.37231 12.6583 6.99952L10.5373 9.12052L9.12229 7.70652L11.2443 5.58552C11.4301 5.39979 11.5775 5.17928 11.678 4.93657C11.7786 4.69387 11.8304 4.43373 11.8304 4.17102C11.8304 3.90831 11.7786 3.64817 11.678 3.40547C11.5775 3.16276 11.4301 2.94225 11.2443 2.75652H11.2433ZM2.75729 11.2425C2.94302 11.4283 3.16354 11.5757 3.40624 11.6763C3.64894 11.7768 3.90908 11.8286 4.17179 11.8286C4.43451 11.8286 4.69464 11.7768 4.93735 11.6763C5.18005 11.5757 5.40057 11.4283 5.58629 11.2425L7.70729 9.12052L9.12129 10.5355L7.00029 12.6545C6.62886 13.026 6.18789 13.3206 5.70258 13.5217C5.21726 13.7227 4.6971 13.8262 4.17179 13.8262C3.64649 13.8262 3.12633 13.7227 2.64101 13.5217C2.1557 13.3206 1.71473 13.026 1.34329 12.6545L0.636295 11.9485L0.726295 11.8585C0.275988 11.0949 0.0921426 10.2032 0.203642 9.32372C0.315142 8.44421 0.715668 7.62666 1.34229 6.99952L3.46329 4.87852L4.88029 6.29252L2.75729 8.41352C2.57149 8.59925 2.4241 8.81976 2.32354 9.06247C2.22298 9.30517 2.17122 9.56531 2.17122 9.82802C2.17122 10.0907 2.22298 10.3509 2.32354 10.5936C2.4241 10.8363 2.57149 11.0568 2.75729 11.2425Z"
+                          fill="white" />
+                        <path d="M9.82788 5.58588L8.41387 4.17188L4.17188 8.41387L5.58588 9.82788L9.82788 5.58588Z"
+                          fill="white" />
+                      </svg>
+                      Получить ссылку
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+                        <path
+                          d="M8.56873 1C4.46727 1 2.18827 4.18986 1.37837 5.60774C1.21187 5.89855 1.129 6.04471 1.13728 6.26168C1.14708 6.47866 1.24502 6.6203 1.44015 6.90357C2.40449 8.30337 5.02328 11.5475 8.56873 11.5475C12.1142 11.5475 14.733 8.30337 15.6973 6.90357C15.8932 6.6203 15.9911 6.47866 15.9994 6.26168C16.0077 6.04471 15.9256 5.89855 15.7591 5.60774C14.95 4.18986 12.6702 1 8.56873 1Z"
+                          stroke="white" stroke-width="2" />
+                        <path
+                          d="M8.56825 9.28689C10.2326 9.28689 11.5818 7.93768 11.5818 6.27333C11.5818 4.60898 10.2326 3.25977 8.56825 3.25977C6.90391 3.25977 5.55469 4.60898 5.55469 6.27333C5.55469 7.93768 6.90391 9.28689 8.56825 9.28689Z"
+                          fill="white" />
+                      </svg>
+                      Предпросмотр
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0ZM5.35714 4.82143C5.21506 4.82143 5.0788 4.87787 4.97834 4.97834C4.87787 5.0788 4.82143 5.21506 4.82143 5.35714V9.64286C4.82143 9.78494 4.87787 9.9212 4.97834 10.0217C5.0788 10.1221 5.21506 10.1786 5.35714 10.1786H9.64286C9.78494 10.1786 9.9212 10.1221 10.0217 10.0217C10.1221 9.9212 10.1786 9.78494 10.1786 9.64286V5.35714C10.1786 5.21506 10.1221 5.0788 10.0217 4.97834C9.9212 4.87787 9.78494 4.82143 9.64286 4.82143H5.35714Z"
+                          fill="white" />
+                      </svg>
+                      Остановить
+                  </div>
+                  <img src="./images/bar.svg" alt="">
+                  <div class="menu__right">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                        <path
+                          d="M7 0L14 3.75034V11.2497L7 15L0 11.2497V3.75034L7 0ZM7 1.55312L1.44928 4.52622V10.4738L7 13.4469L12.5507 10.4738V4.52622L7 1.55312ZM7 5.48297C6.42344 5.48297 5.8705 5.69547 5.46281 6.07374C5.05512 6.45201 4.82609 6.96505 4.82609 7.5C4.82609 8.03495 5.05512 8.54799 5.46281 8.92626C5.8705 9.30452 6.42344 9.51703 7 9.51703C7.57656 9.51703 8.1295 9.30452 8.53719 8.92626C8.94488 8.54799 9.17391 8.03495 9.17391 7.5C9.17391 6.96505 8.94488 6.45201 8.53719 6.07374C8.1295 5.69547 7.57656 5.48297 7 5.48297ZM3.37681 7.5C3.37681 6.60842 3.75854 5.75335 4.43802 5.1229C5.1175 4.49246 6.03907 4.13828 7 4.13828C7.96093 4.13828 8.8825 4.49246 9.56198 5.1229C10.2415 5.75335 10.6232 6.60842 10.6232 7.5C10.6232 8.39158 10.2415 9.24665 9.56198 9.8771C8.8825 10.5075 7.96093 10.8617 7 10.8617C6.03907 10.8617 5.1175 10.5075 4.43802 9.8771C3.75854 9.24665 3.37681 8.39158 3.37681 7.5Z"
+                          fill="white" />
+                      </svg>
+                      Настройки
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M9.625 0H0V9.625H2.625V7.875H1.75V1.75H7.875V2.625H9.625V0Z" fill="white" />
+                        <path d="M14 4.375H4.375V14H14V4.375ZM6.125 12.25V6.125H12.25V12.25H6.125Z" fill="white" />
+                      </svg>
+                      Дублировать
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                        <path
+                          d="M2.25 14C1.8375 14 1.4845 13.8478 1.191 13.5434C0.8975 13.2391 0.7505 12.8727 0.75 12.4444V2.33333H0V0.777778H3.75V0H8.25V0.777778H12V2.33333H11.25V12.4444C11.25 12.8722 11.1033 13.2386 10.8097 13.5434C10.5162 13.8483 10.163 14.0005 9.75 14H2.25ZM9.75 2.33333H2.25V12.4444H9.75V2.33333ZM3.75 10.8889H5.25V3.88889H3.75V10.8889ZM6.75 10.8889H8.25V3.88889H6.75V10.8889Z"
+                          fill="white" />
+                      </svg>
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="courses__item" href="#">
+            <img src="./images/courses-3.png" alt="" />
+            <p class="courses__title">Курс adobe premere pro 2024</p>
+            <div class="courses__info">
+              <div class="courses__info-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                  <path
+                    d="M10.5 9.53334V11H0V9.53334C0 9.53334 0 6.60001 5.25 6.60001C10.5 6.60001 10.5 9.53334 10.5 9.53334ZM7.875 2.56669C7.875 2.05905 7.72105 1.56281 7.43261 1.14073C7.14417 0.718642 6.7342 0.389667 6.25454 0.195402C5.77489 0.00113805 5.24709 -0.0496904 4.73789 0.0493448C4.22869 0.14838 3.76096 0.392831 3.39384 0.751785C3.02673 1.11074 2.77673 1.56807 2.67544 2.06596C2.57415 2.56384 2.62614 3.07991 2.82482 3.54891C3.0235 4.0179 3.35995 4.41876 3.79163 4.70079C4.22331 4.98282 4.73082 5.13335 5.25 5.13335C5.94619 5.13335 6.61387 4.86293 7.10616 4.38159C7.59844 3.90025 7.875 3.24741 7.875 2.56669ZM10.455 6.60001C10.9161 6.94889 11.2933 7.39233 11.5603 7.89911C11.8272 8.4059 11.9773 8.96373 12 9.53334V11H15V9.53334C15 9.53334 15 6.87134 10.455 6.60001ZM9.75 2.6984e-05C9.23384 -0.00232051 8.72909 0.148549 8.3025 0.432693C8.75808 1.0551 9.00304 1.8013 9.00304 2.56669C9.00304 3.33208 8.75808 4.07828 8.3025 4.70068C8.72909 4.98483 9.23384 5.13569 9.75 5.13335C10.4462 5.13335 11.1139 4.86293 11.6062 4.38159C12.0984 3.90025 12.375 3.24741 12.375 2.56669C12.375 1.88597 12.0984 1.23313 11.6062 0.751785C11.1139 0.270442 10.4462 2.6984e-05 9.75 2.6984e-05ZM4.75 12.9655C4.75 11.0603 6.42812 9.51724 8.5 9.51724C10.5719 9.51724 12.25 11.0603 12.25 12.9655V13.3103C12.25 13.6918 11.9148 14 11.5 14H5.5C5.08516 14 4.75 13.6918 4.75 13.3103V12.9655Z"
+                    fill="black" />
+                </svg>
+                <p class="courses__number">313 928</p>
+              </div>
+              <div class="courses__status inactive">
+                Активен
+              </div>
+            </div>
+            <div class="courses__btn-container">
+              <div class="courses__btn-wrapper"><button class="courses__btn">Меню</button></div>
+              <div class="menu-add">
+                <div class="menu-add-inner">
+                  <div class="menu__left">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M11.2433 2.75652C11.0576 2.57072 10.8371 2.42333 10.5943 2.32277C10.3516 2.22221 10.0915 2.17045 9.82879 2.17045C9.56608 2.17045 9.30595 2.22221 9.06324 2.32277C8.82054 2.42333 8.60002 2.57072 8.41429 2.75652L6.29329 4.87952L4.87929 3.46352L7.00029 1.34352C7.37173 0.972065 7.8127 0.677408 8.29801 0.476377C8.78333 0.275345 9.30349 0.171875 9.82879 0.171875C10.3541 0.171875 10.8743 0.275345 11.3596 0.476377C11.8449 0.677408 12.2859 0.972065 12.6573 1.34352L13.3643 2.04952L13.2743 2.13952C13.7249 2.90329 13.9088 3.79513 13.7973 4.67485C13.6858 5.55458 13.2852 6.37231 12.6583 6.99952L10.5373 9.12052L9.12229 7.70652L11.2443 5.58552C11.4301 5.39979 11.5775 5.17928 11.678 4.93657C11.7786 4.69387 11.8304 4.43373 11.8304 4.17102C11.8304 3.90831 11.7786 3.64817 11.678 3.40547C11.5775 3.16276 11.4301 2.94225 11.2443 2.75652H11.2433ZM2.75729 11.2425C2.94302 11.4283 3.16354 11.5757 3.40624 11.6763C3.64894 11.7768 3.90908 11.8286 4.17179 11.8286C4.43451 11.8286 4.69464 11.7768 4.93735 11.6763C5.18005 11.5757 5.40057 11.4283 5.58629 11.2425L7.70729 9.12052L9.12129 10.5355L7.00029 12.6545C6.62886 13.026 6.18789 13.3206 5.70258 13.5217C5.21726 13.7227 4.6971 13.8262 4.17179 13.8262C3.64649 13.8262 3.12633 13.7227 2.64101 13.5217C2.1557 13.3206 1.71473 13.026 1.34329 12.6545L0.636295 11.9485L0.726295 11.8585C0.275988 11.0949 0.0921426 10.2032 0.203642 9.32372C0.315142 8.44421 0.715668 7.62666 1.34229 6.99952L3.46329 4.87852L4.88029 6.29252L2.75729 8.41352C2.57149 8.59925 2.4241 8.81976 2.32354 9.06247C2.22298 9.30517 2.17122 9.56531 2.17122 9.82802C2.17122 10.0907 2.22298 10.3509 2.32354 10.5936C2.4241 10.8363 2.57149 11.0568 2.75729 11.2425Z"
+                          fill="white" />
+                        <path d="M9.82788 5.58588L8.41387 4.17188L4.17188 8.41387L5.58588 9.82788L9.82788 5.58588Z"
+                          fill="white" />
+                      </svg>
+                      Получить ссылку
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+                        <path
+                          d="M8.56873 1C4.46727 1 2.18827 4.18986 1.37837 5.60774C1.21187 5.89855 1.129 6.04471 1.13728 6.26168C1.14708 6.47866 1.24502 6.6203 1.44015 6.90357C2.40449 8.30337 5.02328 11.5475 8.56873 11.5475C12.1142 11.5475 14.733 8.30337 15.6973 6.90357C15.8932 6.6203 15.9911 6.47866 15.9994 6.26168C16.0077 6.04471 15.9256 5.89855 15.7591 5.60774C14.95 4.18986 12.6702 1 8.56873 1Z"
+                          stroke="white" stroke-width="2" />
+                        <path
+                          d="M8.56825 9.28689C10.2326 9.28689 11.5818 7.93768 11.5818 6.27333C11.5818 4.60898 10.2326 3.25977 8.56825 3.25977C6.90391 3.25977 5.55469 4.60898 5.55469 6.27333C5.55469 7.93768 6.90391 9.28689 8.56825 9.28689Z"
+                          fill="white" />
+                      </svg>
+                      Предпросмотр
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0ZM5.35714 4.82143C5.21506 4.82143 5.0788 4.87787 4.97834 4.97834C4.87787 5.0788 4.82143 5.21506 4.82143 5.35714V9.64286C4.82143 9.78494 4.87787 9.9212 4.97834 10.0217C5.0788 10.1221 5.21506 10.1786 5.35714 10.1786H9.64286C9.78494 10.1786 9.9212 10.1221 10.0217 10.0217C10.1221 9.9212 10.1786 9.78494 10.1786 9.64286V5.35714C10.1786 5.21506 10.1221 5.0788 10.0217 4.97834C9.9212 4.87787 9.78494 4.82143 9.64286 4.82143H5.35714Z"
+                          fill="white" />
+                      </svg>
+                      Остановить
+                  </div>
+                  <img src="./images/bar.svg" alt="">
+                  <div class="menu__right">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                        <path
+                          d="M7 0L14 3.75034V11.2497L7 15L0 11.2497V3.75034L7 0ZM7 1.55312L1.44928 4.52622V10.4738L7 13.4469L12.5507 10.4738V4.52622L7 1.55312ZM7 5.48297C6.42344 5.48297 5.8705 5.69547 5.46281 6.07374C5.05512 6.45201 4.82609 6.96505 4.82609 7.5C4.82609 8.03495 5.05512 8.54799 5.46281 8.92626C5.8705 9.30452 6.42344 9.51703 7 9.51703C7.57656 9.51703 8.1295 9.30452 8.53719 8.92626C8.94488 8.54799 9.17391 8.03495 9.17391 7.5C9.17391 6.96505 8.94488 6.45201 8.53719 6.07374C8.1295 5.69547 7.57656 5.48297 7 5.48297ZM3.37681 7.5C3.37681 6.60842 3.75854 5.75335 4.43802 5.1229C5.1175 4.49246 6.03907 4.13828 7 4.13828C7.96093 4.13828 8.8825 4.49246 9.56198 5.1229C10.2415 5.75335 10.6232 6.60842 10.6232 7.5C10.6232 8.39158 10.2415 9.24665 9.56198 9.8771C8.8825 10.5075 7.96093 10.8617 7 10.8617C6.03907 10.8617 5.1175 10.5075 4.43802 9.8771C3.75854 9.24665 3.37681 8.39158 3.37681 7.5Z"
+                          fill="white" />
+                      </svg>
+                      Настройки
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M9.625 0H0V9.625H2.625V7.875H1.75V1.75H7.875V2.625H9.625V0Z" fill="white" />
+                        <path d="M14 4.375H4.375V14H14V4.375ZM6.125 12.25V6.125H12.25V12.25H6.125Z" fill="white" />
+                      </svg>
+                      Дублировать
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                        <path
+                          d="M2.25 14C1.8375 14 1.4845 13.8478 1.191 13.5434C0.8975 13.2391 0.7505 12.8727 0.75 12.4444V2.33333H0V0.777778H3.75V0H8.25V0.777778H12V2.33333H11.25V12.4444C11.25 12.8722 11.1033 13.2386 10.8097 13.5434C10.5162 13.8483 10.163 14.0005 9.75 14H2.25ZM9.75 2.33333H2.25V12.4444H9.75V2.33333ZM3.75 10.8889H5.25V3.88889H3.75V10.8889ZM6.75 10.8889H8.25V3.88889H6.75V10.8889Z"
+                          fill="white" />
+                      </svg>
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="courses__item" href="#">
+            <img src="./images/courses-1.png" alt="" />
+            <p class="courses__title">Курс Супер Иллюстратор</p>
+            <div class="courses__info">
+              <div class="courses__info-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                  <path
+                    d="M10.5 9.53334V11H0V9.53334C0 9.53334 0 6.60001 5.25 6.60001C10.5 6.60001 10.5 9.53334 10.5 9.53334ZM7.875 2.56669C7.875 2.05905 7.72105 1.56281 7.43261 1.14073C7.14417 0.718642 6.7342 0.389667 6.25454 0.195402C5.77489 0.00113805 5.24709 -0.0496904 4.73789 0.0493448C4.22869 0.14838 3.76096 0.392831 3.39384 0.751785C3.02673 1.11074 2.77673 1.56807 2.67544 2.06596C2.57415 2.56384 2.62614 3.07991 2.82482 3.54891C3.0235 4.0179 3.35995 4.41876 3.79163 4.70079C4.22331 4.98282 4.73082 5.13335 5.25 5.13335C5.94619 5.13335 6.61387 4.86293 7.10616 4.38159C7.59844 3.90025 7.875 3.24741 7.875 2.56669ZM10.455 6.60001C10.9161 6.94889 11.2933 7.39233 11.5603 7.89911C11.8272 8.4059 11.9773 8.96373 12 9.53334V11H15V9.53334C15 9.53334 15 6.87134 10.455 6.60001ZM9.75 2.6984e-05C9.23384 -0.00232051 8.72909 0.148549 8.3025 0.432693C8.75808 1.0551 9.00304 1.8013 9.00304 2.56669C9.00304 3.33208 8.75808 4.07828 8.3025 4.70068C8.72909 4.98483 9.23384 5.13569 9.75 5.13335C10.4462 5.13335 11.1139 4.86293 11.6062 4.38159C12.0984 3.90025 12.375 3.24741 12.375 2.56669C12.375 1.88597 12.0984 1.23313 11.6062 0.751785C11.1139 0.270442 10.4462 2.6984e-05 9.75 2.6984e-05ZM4.75 12.9655C4.75 11.0603 6.42812 9.51724 8.5 9.51724C10.5719 9.51724 12.25 11.0603 12.25 12.9655V13.3103C12.25 13.6918 11.9148 14 11.5 14H5.5C5.08516 14 4.75 13.6918 4.75 13.3103V12.9655Z"
+                    fill="black" />
+                </svg>
+                <p class="courses__number">313 928</p>
+              </div>
+              <div class="courses__status active">
+                Активен
+              </div>
+            </div>
+            <div class="courses__btn-container">
+              <div class="courses__btn-wrapper"><button class="courses__btn">Меню</button></div>
+              <div class="menu-add">
+                <div class="menu-add-inner">
+                  <div class="menu__left">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M11.2433 2.75652C11.0576 2.57072 10.8371 2.42333 10.5943 2.32277C10.3516 2.22221 10.0915 2.17045 9.82879 2.17045C9.56608 2.17045 9.30595 2.22221 9.06324 2.32277C8.82054 2.42333 8.60002 2.57072 8.41429 2.75652L6.29329 4.87952L4.87929 3.46352L7.00029 1.34352C7.37173 0.972065 7.8127 0.677408 8.29801 0.476377C8.78333 0.275345 9.30349 0.171875 9.82879 0.171875C10.3541 0.171875 10.8743 0.275345 11.3596 0.476377C11.8449 0.677408 12.2859 0.972065 12.6573 1.34352L13.3643 2.04952L13.2743 2.13952C13.7249 2.90329 13.9088 3.79513 13.7973 4.67485C13.6858 5.55458 13.2852 6.37231 12.6583 6.99952L10.5373 9.12052L9.12229 7.70652L11.2443 5.58552C11.4301 5.39979 11.5775 5.17928 11.678 4.93657C11.7786 4.69387 11.8304 4.43373 11.8304 4.17102C11.8304 3.90831 11.7786 3.64817 11.678 3.40547C11.5775 3.16276 11.4301 2.94225 11.2443 2.75652H11.2433ZM2.75729 11.2425C2.94302 11.4283 3.16354 11.5757 3.40624 11.6763C3.64894 11.7768 3.90908 11.8286 4.17179 11.8286C4.43451 11.8286 4.69464 11.7768 4.93735 11.6763C5.18005 11.5757 5.40057 11.4283 5.58629 11.2425L7.70729 9.12052L9.12129 10.5355L7.00029 12.6545C6.62886 13.026 6.18789 13.3206 5.70258 13.5217C5.21726 13.7227 4.6971 13.8262 4.17179 13.8262C3.64649 13.8262 3.12633 13.7227 2.64101 13.5217C2.1557 13.3206 1.71473 13.026 1.34329 12.6545L0.636295 11.9485L0.726295 11.8585C0.275988 11.0949 0.0921426 10.2032 0.203642 9.32372C0.315142 8.44421 0.715668 7.62666 1.34229 6.99952L3.46329 4.87852L4.88029 6.29252L2.75729 8.41352C2.57149 8.59925 2.4241 8.81976 2.32354 9.06247C2.22298 9.30517 2.17122 9.56531 2.17122 9.82802C2.17122 10.0907 2.22298 10.3509 2.32354 10.5936C2.4241 10.8363 2.57149 11.0568 2.75729 11.2425Z"
+                          fill="white" />
+                        <path d="M9.82788 5.58588L8.41387 4.17188L4.17188 8.41387L5.58588 9.82788L9.82788 5.58588Z"
+                          fill="white" />
+                      </svg>
+                      Получить ссылку
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+                        <path
+                          d="M8.56873 1C4.46727 1 2.18827 4.18986 1.37837 5.60774C1.21187 5.89855 1.129 6.04471 1.13728 6.26168C1.14708 6.47866 1.24502 6.6203 1.44015 6.90357C2.40449 8.30337 5.02328 11.5475 8.56873 11.5475C12.1142 11.5475 14.733 8.30337 15.6973 6.90357C15.8932 6.6203 15.9911 6.47866 15.9994 6.26168C16.0077 6.04471 15.9256 5.89855 15.7591 5.60774C14.95 4.18986 12.6702 1 8.56873 1Z"
+                          stroke="white" stroke-width="2" />
+                        <path
+                          d="M8.56825 9.28689C10.2326 9.28689 11.5818 7.93768 11.5818 6.27333C11.5818 4.60898 10.2326 3.25977 8.56825 3.25977C6.90391 3.25977 5.55469 4.60898 5.55469 6.27333C5.55469 7.93768 6.90391 9.28689 8.56825 9.28689Z"
+                          fill="white" />
+                      </svg>
+                      Предпросмотр
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0ZM5.35714 4.82143C5.21506 4.82143 5.0788 4.87787 4.97834 4.97834C4.87787 5.0788 4.82143 5.21506 4.82143 5.35714V9.64286C4.82143 9.78494 4.87787 9.9212 4.97834 10.0217C5.0788 10.1221 5.21506 10.1786 5.35714 10.1786H9.64286C9.78494 10.1786 9.9212 10.1221 10.0217 10.0217C10.1221 9.9212 10.1786 9.78494 10.1786 9.64286V5.35714C10.1786 5.21506 10.1221 5.0788 10.0217 4.97834C9.9212 4.87787 9.78494 4.82143 9.64286 4.82143H5.35714Z"
+                          fill="white" />
+                      </svg>
+                      Остановить
+                  </div>
+                  <img src="./images/bar.svg" alt="">
+                  <div class="menu__right">
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                        <path
+                          d="M7 0L14 3.75034V11.2497L7 15L0 11.2497V3.75034L7 0ZM7 1.55312L1.44928 4.52622V10.4738L7 13.4469L12.5507 10.4738V4.52622L7 1.55312ZM7 5.48297C6.42344 5.48297 5.8705 5.69547 5.46281 6.07374C5.05512 6.45201 4.82609 6.96505 4.82609 7.5C4.82609 8.03495 5.05512 8.54799 5.46281 8.92626C5.8705 9.30452 6.42344 9.51703 7 9.51703C7.57656 9.51703 8.1295 9.30452 8.53719 8.92626C8.94488 8.54799 9.17391 8.03495 9.17391 7.5C9.17391 6.96505 8.94488 6.45201 8.53719 6.07374C8.1295 5.69547 7.57656 5.48297 7 5.48297ZM3.37681 7.5C3.37681 6.60842 3.75854 5.75335 4.43802 5.1229C5.1175 4.49246 6.03907 4.13828 7 4.13828C7.96093 4.13828 8.8825 4.49246 9.56198 5.1229C10.2415 5.75335 10.6232 6.60842 10.6232 7.5C10.6232 8.39158 10.2415 9.24665 9.56198 9.8771C8.8825 10.5075 7.96093 10.8617 7 10.8617C6.03907 10.8617 5.1175 10.5075 4.43802 9.8771C3.75854 9.24665 3.37681 8.39158 3.37681 7.5Z"
+                          fill="white" />
+                      </svg>
+                      Настройки
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M9.625 0H0V9.625H2.625V7.875H1.75V1.75H7.875V2.625H9.625V0Z" fill="white" />
+                        <path d="M14 4.375H4.375V14H14V4.375ZM6.125 12.25V6.125H12.25V12.25H6.125Z" fill="white" />
+                      </svg>
+                      Дублировать
+                    </button>
+                    <button class="menu__btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                        <path
+                          d="M2.25 14C1.8375 14 1.4845 13.8478 1.191 13.5434C0.8975 13.2391 0.7505 12.8727 0.75 12.4444V2.33333H0V0.777778H3.75V0H8.25V0.777778H12V2.33333H11.25V12.4444C11.25 12.8722 11.1033 13.2386 10.8097 13.5434C10.5162 13.8483 10.163 14.0005 9.75 14H2.25ZM9.75 2.33333H2.25V12.4444H9.75V2.33333ZM3.75 10.8889H5.25V3.88889H3.75V10.8889ZM6.75 10.8889H8.25V3.88889H6.75V10.8889Z"
+                          fill="white" />
+                      </svg>
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="redactor">
+        <div class="redactor__header">
+          <div class="redactor__left">
+            <button class="redactor__back">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.07612 5.617C3.15186 5.43431 3.28007 5.27819 3.44454 5.16837C3.60901 5.05854 3.80235 4.99995 4.00012 5H14.0001C14.9194 5 15.8296 5.18106 16.679 5.53284C17.5282 5.88463 18.2999 6.40024 18.95 7.05025C19.6 7.70026 20.1155 8.47194 20.4673 9.32122C20.8191 10.1705 21.0001 11.0807 21.0001 12C21.0001 12.9193 20.8191 13.8295 20.4673 14.6788C20.1155 15.5281 19.6 16.2997 18.95 16.9497C18.3 17.5998 17.5282 18.1154 16.6789 18.4672C15.8296 18.8189 14.9194 19 14.0001 19H5.00012C4.7349 19 4.48055 18.8946 4.29301 18.7071C4.10547 18.5196 4.00012 18.2652 4.00012 18C4.00012 17.7348 4.10547 17.4804 4.29301 17.2929C4.48055 17.1054 4.7349 17 5.00012 17H14.0001C15.3262 17 16.598 16.4732 17.5357 15.5355C18.4733 14.5979 19.0001 13.3261 19.0001 12C19.0001 10.6739 18.4733 9.40215 17.5357 8.46447C16.598 7.52678 15.3262 7 14.0001 7H6.41412L8.20712 8.793C8.38927 8.9816 8.49007 9.2342 8.48779 9.4964C8.48551 9.7586 8.38034 10.0094 8.19493 10.1948C8.00953 10.3802 7.75871 10.4854 7.49652 10.4877C7.23432 10.49 6.98172 10.3892 6.79312 10.207L3.29312 6.707C3.15318 6.56716 3.05787 6.38895 3.01925 6.19492C2.98062 6.0009 3.00041 5.79977 3.07612 5.617Z"
+                  fill="black" />
+              </svg>
+            </button>
+            <h3 class="redactor__title">
+              Курс Супер Иллюстратор
+            </h3>
+          </div>
+          <div class="redactor__right">
+            <button class="redactor__activate">
+              Активировать
+            </button>
+            <button class="redactor__delete">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="38" viewBox="0 0 45 38" fill="none">
+                <rect width="45" height="38" rx="4" fill="#919191" fill-opacity="0.44" />
+                <path
+                  d="M18 28C17.45 28 16.9793 27.8043 16.588 27.413C16.1967 27.0217 16.0007 26.5507 16 26V13H15V11H20V10H26V11H31V13H30V26C30 26.55 29.8043 27 29.413 27.413C29.0217 27.805 28.5507 28 28 28H18ZM28 13H18V26H28V13ZM20 24H22V15H20V24ZM24 24H26V15H24V24Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="redactor__main">
+          <div class="redactor__tabs">
+            <a class="redactor__tab active" href="#">
+              Контент
+            </a>
+            <a class="redactor__tab " href="#">
+              Модули
+            </a>
+            <a class="redactor__tab " href="#">
+              Меню
+            </a>
+            <a class="redactor__tab" href="#">
+              Тарифы
+            </a>
+            <a class="redactor__tab" href="#">
+              Настрйоки
+            </a>
+          </div>
+          <div class="redactor__content">
+            <button class="redactor__add">
+              <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105" fill="none">
+                <path
+                  d="M52.5 104C80.9435 104 104 80.9435 104 52.5C104 24.0566 80.9435 1 52.5 1C24.0566 1 1 24.0566 1 52.5C1 80.9435 24.0566 104 52.5 104Z"
+                  stroke="#0284FD" stroke-width="2" stroke-linejoin="round" />
+                <path d="M52.4999 31.8999V73.0999M31.8999 52.4999H73.0999" stroke="#0284FD" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <p class="redactor__text">
+              Наполните продукт шагами: сообщениями, уроками, заданиями, тестами или опросами. Отправляйте материалы в
+              точное время
+              или в зависимости от действий подписчиков
+            </p>
+            <button class="btn-create-content redactor__create" id="createContentBtnTariff">
+              <img src="./images/sidebar-circle.svg" alt="">Создать Контент</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="massage">
+        <div class="massage__header">
+          <div class="massage__left">
+            <button class="massage__back">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.07612 5.617C3.15186 5.43431 3.28007 5.27819 3.44454 5.16837C3.60901 5.05854 3.80235 4.99995 4.00012 5H14.0001C14.9194 5 15.8296 5.18106 16.6789 5.53284C17.5282 5.88463 18.2999 6.40024 18.9499 7.05025C19.5999 7.70026 20.1155 8.47194 20.4673 9.32122C20.8191 10.1705 21.0001 11.0807 21.0001 12C21.0001 12.9193 20.8191 13.8295 20.4673 14.6788C20.1155 15.5281 19.5999 16.2997 18.9499 16.9497C18.2999 17.5998 17.5282 18.1154 16.6789 18.4672C15.8296 18.8189 14.9194 19 14.0001 19H5.00012C4.7349 19 4.48055 18.8946 4.29301 18.7071C4.10547 18.5196 4.00012 18.2652 4.00012 18C4.00012 17.7348 4.10547 17.4804 4.29301 17.2929C4.48055 17.1054 4.7349 17 5.00012 17H14.0001C15.3262 17 16.598 16.4732 17.5357 15.5355C18.4733 14.5979 19.0001 13.3261 19.0001 12C19.0001 10.6739 18.4733 9.40215 17.5357 8.46447C16.598 7.52678 15.3262 7 14.0001 7H6.41412L8.20712 8.793C8.38927 8.9816 8.49007 9.2342 8.48779 9.4964C8.48551 9.7586 8.38034 10.0094 8.19493 10.1948C8.00953 10.3802 7.75871 10.4854 7.49652 10.4877C7.23432 10.49 6.98172 10.3892 6.79312 10.207L3.29312 6.707C3.15318 6.56716 3.05787 6.38895 3.01925 6.19492C2.98062 6.0009 3.00041 5.79977 3.07612 5.617Z"
+                  fill="black" />
+              </svg>
+            </button>
+            <h3 class="massage__title">
+              Сообщение
+            </h3>
+          </div>
+          <div class="massage__right">
+            <button class="massage__save">
+              Сохранить
+            </button>
+            <button class="massage__eye">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="38" viewBox="0 0 45 38" fill="none">
+                <rect width="45" height="38" rx="4" fill="#919191" fill-opacity="0.44" />
+                <path
+                  d="M23 16.5C23.7956 16.5 24.5587 16.8161 25.1213 17.3787C25.6839 17.9413 26 18.7044 26 19.5C26 20.2956 25.6839 21.0587 25.1213 21.6213C24.5587 22.1839 23.7956 22.5 23 22.5C22.2044 22.5 21.4413 22.1839 20.8787 21.6213C20.3161 21.0587 20 20.2956 20 19.5C20 18.7044 20.3161 17.9413 20.8787 17.3787C21.4413 16.8161 22.2044 16.5 23 16.5ZM23 12C28 12 32.27 15.11 34 19.5C32.27 23.89 28 27 23 27C18 27 13.73 23.89 12 19.5C13.73 15.11 18 12 23 12ZM14.18 19.5C14.9883 21.1503 16.2433 22.5407 17.8025 23.5133C19.3617 24.4858 21.1624 25.0013 23 25.0013C24.8376 25.0013 26.6383 24.4858 28.1975 23.5133C29.7567 22.5407 31.0117 21.1503 31.82 19.5C31.0117 17.8497 29.7567 16.4593 28.1975 15.4867C26.6383 14.5142 24.8376 13.9987 23 13.9987C21.1624 13.9987 19.3617 14.5142 17.8025 15.4867C16.2433 16.4593 14.9883 17.8497 14.18 19.5Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="massage__main">
+          <div class="massage__content">
+            <label class="massage__name">
+              Название
+              <input type="text" class="massage__input" placeholder="Введите название" />
+            </label>
+            <label class="massage__description">
+              Описание
+            </label>
+            <label class="massage__correct">
+              <svg xmlns="http://www.w3.org/2000/svg" width="62" height="15" viewBox="0 0 62 15" fill="none">
+                <path
+                  d="M0 14V0H5.56098C6.63415 0 7.56504 0.35 8.35366 1.05C9.14228 1.75 9.53658 2.63333 9.53658 3.7C9.53658 4.33333 9.36585 4.91667 9.02439 5.45C8.68293 5.98333 8.22764 6.39167 7.65854 6.675V6.825C8.35772 7.05833 8.92276 7.475 9.35366 8.075C9.78455 8.675 10 9.35 10 10.1C10 11.2333 9.57317 12.1667 8.71951 12.9C7.86585 13.6333 6.86992 14 5.73171 14H0ZM2.09756 5.925H5.41463C5.98374 5.925 6.47561 5.73333 6.89024 5.35C7.30488 4.96667 7.5122 4.48333 7.5122 3.9C7.5122 3.31667 7.30488 2.82917 6.89024 2.4375C6.47561 2.04583 5.98374 1.85 5.41463 1.85H2.09756V5.925ZM2.09756 12.1H5.60976C6.22764 12.1 6.76423 11.8917 7.21951 11.475C7.6748 11.0583 7.90244 10.5333 7.90244 9.9C7.90244 9.28333 7.6748 8.76667 7.21951 8.35C6.76423 7.93333 6.22764 7.725 5.60976 7.725H2.09756V12.1Z"
+                  fill="black" />
+                <path d="M24 14V11.8125H26.9357L30.75 2.1875H27.4286V0H36V2.1875H33.0643L29.25 11.8125H32.5714V14H24Z" fill="black" />
+                <path
+                  d="M50 15V13.75H62V15H50ZM56 11.6667C54.5571 11.6667 53.3393 11.1875 52.3464 10.2292C51.3536 9.27083 50.8571 8.09722 50.8571 6.70833V0H52.5714V6.75C52.5714 7.66667 52.9 8.4375 53.5571 9.0625C54.2143 9.6875 55.0286 10 56 10C56.9714 10 57.7857 9.6875 58.4429 9.0625C59.1 8.4375 59.4286 7.66667 59.4286 6.75V0H61.1429V6.70833C61.1429 8.09722 60.6464 9.27083 59.6536 10.2292C58.6607 11.1875 57.4429 11.6667 56 11.6667Z"
+                  fill="black" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="14" viewBox="0 0 42 14" fill="none">
+                <path
+                  d="M0.991667 14C0.719445 14 0.486111 13.8872 0.291667 13.6617C0.0972222 13.4361 0 13.1678 0 12.8567C0 12.53 0.0972222 12.25 0.291667 12.0167C0.486111 11.7833 0.719445 11.6667 0.991667 11.6667C1.25093 11.6667 1.47454 11.7833 1.6625 12.0167C1.85046 12.25 1.94444 12.53 1.94444 12.8567C1.94444 13.1678 1.85046 13.4361 1.6625 13.6617C1.47454 13.8872 1.25093 14 0.991667 14ZM3.88889 13.5333V12.1333H14V13.5333H3.88889ZM0.991667 8.16667C0.719445 8.16667 0.486111 8.05389 0.291667 7.82833C0.0972222 7.60278 0 7.32667 0 7C0 6.67333 0.0972222 6.39722 0.291667 6.17167C0.486111 5.94611 0.719445 5.83333 0.991667 5.83333C1.25093 5.83333 1.47454 5.95 1.6625 6.18333C1.85046 6.41667 1.94444 6.68889 1.94444 7C1.94444 7.31111 1.85046 7.58333 1.6625 7.81667C1.47454 8.05 1.25093 8.16667 0.991667 8.16667ZM3.88889 7.7V6.3H14V7.7H3.88889ZM0.972222 2.33333C0.7 2.33333 0.469907 2.22056 0.281944 1.995C0.0939815 1.76944 0 1.49333 0 1.16667C0 0.84 0.0939815 0.563889 0.281944 0.338334C0.469907 0.112778 0.7 0 0.972222 0C1.24444 0 1.47454 0.112778 1.6625 0.338334C1.85046 0.563889 1.94444 0.84 1.94444 1.16667C1.94444 1.49333 1.85046 1.76944 1.6625 1.995C1.47454 2.22056 1.24444 2.33333 0.972222 2.33333ZM3.88889 1.86667V0.466667H14V1.86667H3.88889Z"
+                  fill="black" />
+                <path
+                  d="M28 14V13.2562H29.6333V12.6875H28.8167V11.9437H29.6333V11.375H28V10.6312H30.2944V14H28ZM32.0639 12.9281V11.6156H42V12.9281H32.0639ZM28 8.68437V7.98438L29.4583 6.05938H28V5.31562H30.2944V6.01562L28.8167 7.94062H30.2944V8.68437H28ZM32.0639 7.6125V6.3H42V7.6125H32.0639ZM28.8167 3.4125V0.74375H28V0H29.4778V3.4125H28.8167ZM32.0639 2.29688V0.984375H42V2.29688H32.0639Z"
+                  fill="black" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="15" viewBox="0 0 35 15" fill="none">
+                <path
+                  d="M2.55208 0.671176L3.17917 0L8.25417 5.43184C8.47778 5.67118 8.58958 5.96514 8.58958 6.31374C8.58958 6.66233 8.47778 6.9563 8.25417 7.19563L5.65833 9.97399C5.43472 10.2133 5.17222 10.333 4.87083 10.333C4.56945 10.333 4.30694 10.2133 4.08333 9.97399L1.4875 7.19563C1.26389 6.9563 1.15208 6.66233 1.15208 6.31374C1.15208 5.96514 1.26389 5.67118 1.4875 5.43184L4.24375 2.48179L2.55208 0.671176ZM4.87083 3.15297L1.96875 6.25911H7.77292L4.87083 3.15297ZM9.8 10.5983C9.50833 10.5983 9.26042 10.4891 9.05625 10.2706C8.85208 10.052 8.75 9.78668 8.75 9.47451C8.75 9.29761 8.78889 9.1051 8.86667 8.89698C8.94445 8.68887 9.05139 8.47555 9.1875 8.25702C9.26528 8.12175 9.36007 7.97607 9.47188 7.81998C9.58368 7.66389 9.69306 7.51821 9.8 7.38293C9.90694 7.51821 10.0163 7.66389 10.1281 7.81998C10.2399 7.97607 10.3347 8.12175 10.4125 8.25702C10.5486 8.47555 10.6556 8.68887 10.7333 8.89698C10.8111 9.1051 10.85 9.29761 10.85 9.47451C10.85 9.78668 10.7479 10.052 10.5438 10.2706C10.3396 10.4891 10.0917 10.5983 9.8 10.5983ZM0 15V13.1113H11.6667V15H0Z"
+                  fill="black" />
+                <path
+                  d="M30.4791 13.3332V3.48942H27.4166V1.6665H34.9999V3.48942H31.9374V13.3332H30.4791ZM25.2291 13.3332V7.13525H23.3333V5.31234H28.5833V7.13525H26.6874V13.3332H25.2291Z"
+                  fill="black" />
+              </svg>
+            </label>
+            <textarea class="massage__textarea" placeholder="Введите текст сообщения"></textarea>
+            <div class="massage__include">
+              <p class="massage__text massage__include-text">
+                Вложения
+              </p>
+              <button class="massage__add">
+                Добавить
+                <img src="./images/plus.svg" alt="">
+              </button>
+            </div>
+            <div class="massage__include">
+              <p class="massage__text massage__include-text">
+                Кнопки
+              </p>
+              <button class="massage__add">
+                Добавить
+                <img src="./images/plus.svg" alt="">
+              </button>
+            </div>
+            <p class="massage__settings-text">
+              Настройки
+            </p>
+            <div class="massage__settings">
+              <div class="massage__settings-left">
+                <div class="massage__checkbox">
+                  <input type="checkbox" id="sendToAll" checked />
+                  <label for="sendToAll">Защита контента</label>
+                </div>
+                <div class="massage__checkbox">
+                  <input type="checkbox" id="sendToNew" />
+                  <label for="sendToNew">Предпросмотр ссылок</label>
+                </div>
+              </div>
+              <div class="massage__settings-right">
+                <div class="massage__info">
+                  <p class="massage__info-text">
+                    Время отправки
+                  </p>
+                  <p class="massage__settings-description">
+                    Мгновенно
+                  </p>
+                </div>
+                <div class="massage__info">
+                  <p class="massage__info-text">
+                    Доступ в меню
+                  </p>
+                  <p class="massage__settings-description">
+                    После добавления
+                  </p>
+                </div>
+                <div class="massage__info">
+                  <p class="massage__info-text">
+                    Автоудаление
+                  </p>
+                  <p class="massage__settings-description">
+                    Никогда
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="massage__include">
+              <p class="massage__text massage__include-text">
+                Статус
+              </p>
+              <div class="courses__status active">
+                Активен
+              </div>
+            </div>
+          </div>
+          <div class="massage__steps">
+            <div class="massage__top">
+              <p class="massage__text massage__steps-text">
+                Шаги
+              </p>
+              <button class="massage__btn">
+                <img src="./images/plus-white.svg" alt="">
+                Добавить шаг
+              </button>
+            </div>
+            <hr>
+            <div class="massage__steps-info">
+              <img src="./images/massage-icon.svg" alt="">
+              <p class="massage__info-steps--text">
+                Сообщение
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Create Product -->
+    <div class="modal-overlay" id="createProductModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Создать продукт</h2>
+          <button class="modal-close" id="closeModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M7.00078 8.40078L2.10078 13.3008C1.91745 13.4841 1.68411 13.5758 1.40078 13.5758C1.11745 13.5758 0.884114 13.4841 0.700781 13.3008C0.517448 13.1174 0.425781 12.8841 0.425781 12.6008C0.425781 12.3174 0.517448 12.0841 0.700781 11.9008L5.60078 7.00078L0.700781 2.10078C0.517448 1.91745 0.425781 1.68411 0.425781 1.40078C0.425781 1.11745 0.517448 0.884114 0.700781 0.700781C0.884114 0.517448 1.11745 0.425781 1.40078 0.425781C1.68411 0.425781 1.91745 0.517448 2.10078 0.700781L7.00078 5.60078L11.9008 0.700781C12.0841 0.517448 12.3174 0.425781 12.6008 0.425781C12.8841 0.425781 13.1174 0.517448 13.3008 0.700781C13.4841 0.884114 13.5758 1.11745 13.5758 1.40078C13.5758 1.68411 13.4841 1.91745 13.3008 2.10078L8.40078 7.00078L13.3008 11.9008C13.4841 12.0841 13.5758 12.3174 13.5758 12.6008C13.5758 12.8841 13.4841 13.1174 13.3008 13.3008C13.1174 13.4841 12.8841 13.5758 12.6008 13.5758C12.3174 13.5758 12.0841 13.4841 11.9008 13.3008L7.00078 8.40078Z"
+                fill="black" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="productName" class="form-label">Название Продукта</label>
+            <input type="text" id="productName" class="form-input" placeholder="" />
+          </div>
+        </div>
+        <hr />
+        <div class="modal-footer">
+          <button class="btn-cancel" id="cancelBtn">Отмена</button>
+          <button class="btn-next" id="nextBtn">Далее</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Add Tariff -->
+    <div class="modal-overlay" id="addTariffModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Добавить тариф</h2>
+          <button class="modal-close" id="closeTariffModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M7.00078 8.40078L2.10078 13.3008C1.91745 13.4841 1.68411 13.5758 1.40078 13.5758C1.11745 13.5758 0.884114 13.4841 0.700781 13.3008C0.517448 13.1174 0.425781 12.8841 0.425781 12.6008C0.425781 12.3174 0.517448 12.0841 0.700781 11.9008L5.60078 7.00078L0.700781 2.10078C0.517448 1.91745 0.425781 1.68411 0.425781 1.40078C0.425781 1.11745 0.517448 0.884114 0.700781 0.700781C0.884114 0.517448 1.11745 0.425781 1.40078 0.425781C1.68411 0.425781 1.91745 0.517448 2.10078 0.700781L7.00078 5.60078L11.9008 0.700781C12.0841 0.517448 12.3174 0.425781 12.6008 0.425781C12.8841 0.425781 13.1174 0.517448 13.3008 0.700781C13.4841 0.884114 13.5758 1.11745 13.5758 1.40078C13.5758 1.68411 13.4841 1.91745 13.3008 2.10078L8.40078 7.00078L13.3008 11.9008C13.4841 12.0841 13.5758 12.3174 13.5758 12.6008C13.5758 12.8841 13.4841 13.1174 13.3008 13.3008C13.1174 13.4841 12.8841 13.5758 12.6008 13.5758C12.3174 13.5758 12.0841 13.4841 11.9008 13.3008L7.00078 8.40078Z"
+                fill="black" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body modal-body--tariff">
+          <!-- Tabs -->
+          <div class="tariff-tabs">
+            <button class="tariff-tab active" id="newTariffTab">Новый тариф</button>
+            <button class="tariff-tab" id="existingTariffTab">Существующий тариф</button>
+          </div>
+          <!-- New Tariff Content (default visible) -->
+          <div class="tariff-content" id="newTariffContent">
+            <!-- Payment Type Section -->
+            <div class="payment-type-section">
+              <label class="section-label">Тип оплаты</label>
+              <div class="payment-buttons">
+                <button class="payment-btn active" id="oneTimeBtn">Разовая оплата</button>
+                <button class="payment-btn" id="subscriptionBtn">Подписка</button>
+              </div>
+            </div>
+            <!-- Cost Section -->
+            <div class="cost-section">
+              <label class="section-label">Стоимость</label>
+              <div class="cost-input-group">
+                <input type="number" id="costInput" class="cost-input" placeholder="10.00" value="10.00" />
+                <div class="currency-select">
+                  <button class="currency-btn" id="currencyBtn">
+                    <span class="currency-text">USD ($)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path
+                        d="M8.85892 2.26811L5 6.29356L1.14108 2.26811C0.836791 1.91808 0.532503 1.91078 0.228216 2.24624C-0.076072 2.58169 -0.076072 2.90985 0.228216 3.23072L4.54357 7.78123C4.65422 7.92708 4.80636 8 5 8C5.19364 8 5.34578 7.92708 5.45643 7.78123L9.77178 3.23072C10.0761 2.90985 10.0761 2.58169 9.77178 2.24624C9.4675 1.91078 9.16321 1.91808 8.85892 2.26811Z"
+                        fill="#2B3034" fill-opacity="0.4" />
+                    </svg>
+                  </button>
+                  <div class="currency-dropdown" id="currencyDropdown">
+                    <div class="currency-option active" data-currency="USD">USD ($)</div>
+                    <div class="currency-option" data-currency="EUR">EUR (€)</div>
+                    <div class="currency-option" data-currency="UAH">UAH (₴)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tariff-content" id="existingTariffContent" style="display: none;">
+            <div class="existing-tariffs-section">
+              <label class="section-label">Тариф</label>
+              <div class="existing-tariffs-list" id="existingTariffsList">
+              </div>
+            </div>
+            <!-- <div class="selected-tariff-details" id="selectedTariffDetails" style="display: none;">
+            <div class="tariff-details-header">
+              <h4>Детали тарифа</h4>
+            </div>
+            <div class="tariff-details-content">
+              <div class="detail-row">
+                <span class="detail-label">Название:</span>
+                <span class="detail-value" id="detailName">-</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Тип оплаты:</span>
+                <span class="detail-value" id="detailType">-</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Стоимость:</span>
+                <span class="detail-value" id="detailPrice">-</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Описание:</span>
+                <span class="detail-value" id="detailDescription">-</span>
+              </div>
+            </div>
+          </div> -->
+          </div>
+        </div>
+        <hr />
+        <div class="modal-footer modal-footer--tariff">
+          <button class="btn-create-content" id="createContentBtnTariff">Создать Контент</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Get all dropdown elements
+      const langBtn = document.getElementById('langBtn');
+      const langDropdown = document.getElementById('langDropdown');
+      const notificationsBtn = document.getElementById('notificationsBtn');
+      const notificationsDropdown = document.getElementById('notificationsDropdown');
+      const profileBtn = document.getElementById('profileBtn');
+      const profileDropdown = document.getElementById('profileDropdown');
+      const emailBtn = document.getElementById('emailBtn');
+      const emailIcon = document.querySelector('.header__email');
+
+      // Global elements - accessible throughout the script
+      const createContentBtn = document.getElementById('createContentBtn');
+      const createProductModal = document.getElementById('createProductModal');
+      const closeModal = document.getElementById('closeModal');
+      const cancelBtn = document.getElementById('cancelBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const productNameInput = document.getElementById('productName');
+      const createChannelBtn = document.getElementById('createChannelBtn');
+
+      // Elements to hide/show when switching views
+      const manageCalendar = document.querySelector('.manage__calendar');
+      const infoItems = document.getElementById('infoItems');
+      const chartSection = document.getElementById('chartSection');
+      const coursesSection = document.querySelector('.courses');
+
+      // Function to close all dropdowns
+      function closeAllDropdowns() {
+        if (langDropdown) langDropdown.classList.remove('show');
+        if (notificationsDropdown) notificationsDropdown.classList.remove('show');
+        if (profileDropdown) profileDropdown.classList.remove('show');
+
+        // Also close chart period dropdown
+        const chartPeriodDropdown = document.getElementById('chartPeriodDropdown');
+        const chartPeriodBtn = document.getElementById('chartPeriodBtn');
+        if (chartPeriodDropdown) {
+          chartPeriodDropdown.classList.remove('open');
+        }
+        if (chartPeriodBtn) {
+          chartPeriodBtn.classList.remove('open');
+        }
+
+        // Also close courses sort dropdown
+        const coursesSortDropdown = document.getElementById('coursesSortDropdown');
+        const coursesSortBtn = document.getElementById('coursesSortBtn');
+        if (coursesSortDropdown) {
+          coursesSortDropdown.classList.remove('show');
+        }
+        if (coursesSortBtn) {
+          coursesSortBtn.classList.remove('open');
+        }
+      }
+
+      // Function to show dashboard (default view) and hide courses
+      function showDashboardView() {
+        console.log('Switching to dashboard view');
+        // Re-get elements to ensure they exist
+        const currentInfoItems = document.getElementById('infoItems');
+        const currentChartSection = document.getElementById('chartSection');
+        const currentCoursesSection = document.querySelector('.courses');
+
+        // Show calendar and trial period elements back
+        const currentManageCalendar = document.querySelector('.manage__calendar');
+        const currentManageTrial = document.querySelector('.manage__trial');
+
+        // Hide courses sort dropdown
+        const coursesSortContainer = document.getElementById('coursesSortContainer');
+
+        // Remove courses-view class to restore normal button behavior
+        const manageInner = document.querySelector('.manage__inner');
+
+        // Show info items and chart section
+        if (currentInfoItems) currentInfoItems.style.display = 'flex';
+        if (currentChartSection) currentChartSection.style.display = 'block';
+        if (currentManageCalendar) currentManageCalendar.style.display = 'flex';
+        if (currentManageTrial) currentManageTrial.style.display = 'flex';
+
+        // Hide courses section and sort dropdown
+        if (currentCoursesSection) currentCoursesSection.style.display = 'none';
+        if (coursesSortContainer) coursesSortContainer.style.display = 'none';
+        if (manageInner) manageInner.classList.remove('courses-view');
+      }
+
+      // Function to show modal and hide elements
+      function showCreateProductModal() {
+        createProductModal.classList.add('show');
+        document.body.classList.add('modal-open');
+
+        // Hide elements
+        if (manageCalendar) manageCalendar.style.display = 'none';
+        if (infoItems) infoItems.style.display = 'none';
+        if (chartSection) chartSection.style.display = 'none';
+
+        // Focus on input
+        setTimeout(() => {
+          productNameInput.focus();
+        }, 100);
+      }
+
+      // Function to hide modal and show elements
+      function hideCreateProductModal() {
+        createProductModal.classList.remove('show');
+        document.body.classList.remove('modal-open');
+
+        // Check if we should return to redactor or dashboard
+        const redactor = document.querySelector('.redactor');
+        const isRedactorVisible = redactor && redactor.style.display === 'block';
+
+        if (isRedactorVisible) {
+          // If redactor is visible, don't show dashboard elements
+          console.log('Returning to redactor after modal close');
+        } else {
+          // Show dashboard elements back only if not in redactor
+          if (manageCalendar) manageCalendar.style.display = 'flex';
+          if (infoItems) infoItems.style.display = 'flex';
+          if (chartSection) chartSection.style.display = 'block';
+        }
+
+        // Clear input
+        productNameInput.value = '';
+      }
+
+      // Create Content Button click handler
+      createContentBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // First return to dashboard view, then show modal
+        showDashboardView();
+        showCreateProductModal();
+      });
+
+      // Close modal handlers
+      closeModal.addEventListener('click', hideCreateProductModal);
+      cancelBtn.addEventListener('click', hideCreateProductModal);
+
+      // Next button handler
+      nextBtn.addEventListener('click', () => {
+        const productName = productNameInput.value.trim();
+        if (productName) {
+          // Hide the first modal and show the tariff modal
+          hideCreateProductModal();
+          showAddTariffModal();
+        } else {
+          productNameInput.focus();
+          productNameInput.style.borderColor = '#ff4444';
+          setTimeout(() => {
+            productNameInput.style.borderColor = '';
+          }, 2000);
+        }
+      });
+
+      // Close modal when clicking outside
+      createProductModal.addEventListener('click', (e) => {
+        if (e.target === createProductModal) {
+          hideCreateProductModal();
+        }
+      });
+
+      // Language selector functionality
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = langDropdown.classList.contains('show');
+        closeAllDropdowns();
+        if (!isOpen) {
+          langDropdown.classList.add('show');
+        }
+      });
+
+      // Language selection - FIXED VERSION
+      langDropdown.querySelectorAll('li').forEach((item) => {
+        item.addEventListener('click', () => {
+          const img = item.querySelector('img').src;
+          const text = item.textContent.trim();
+
+          // Remove active class and hide checkmark from all items
+          langDropdown.querySelectorAll('li').forEach((li) => {
+            li.classList.remove('active');
+            const checkmark = li.querySelector('.checkmark');
+            if (checkmark) {
+              checkmark.style.display = 'none';
+            }
+          });
+
+          // Add active class and show checkmark for selected item
+          item.classList.add('active');
+          const selectedCheckmark = item.querySelector('.checkmark');
+          if (selectedCheckmark) {
+            selectedCheckmark.style.display = 'block';
+          }
+
+          // Update the image and text properly
+          langBtn.querySelector('img').src = img;
+          langBtn.querySelector('.lang-text').textContent = text;
+
+          langDropdown.classList.remove('show');
+        });
+      });
+
+      // Notifications dropdown functionality
+      notificationsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = notificationsDropdown.classList.contains('show');
+        closeAllDropdowns();
+        if (!isOpen) {
+          notificationsDropdown.classList.add('show');
+        }
+      });
+
+      // Profile dropdown functionality
+      profileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = profileDropdown.classList.contains('show');
+        closeAllDropdowns();
+        if (!isOpen) {
+          profileDropdown.classList.add('show');
+        }
+      });
+
+      // Chart period dropdown functionality - moved to main DOMContentLoaded
+      function initChartPeriodDropdown() {
+        const chartPeriodBtn = document.getElementById('chartPeriodBtn');
+        const chartPeriodDropdown = document.getElementById('chartPeriodDropdown');
+        const periodText = document.getElementById('periodText');
+
+        if (!chartPeriodBtn || !chartPeriodDropdown || !periodText) return;
+
+        const periodOptions = chartPeriodDropdown.querySelectorAll('.period-option');
+
+        chartPeriodBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          closeAllDropdowns();
+          chartPeriodDropdown.classList.toggle('open');
+          chartPeriodBtn.classList.toggle('open');
+        });
+
+        periodOptions.forEach((option) => {
+          option.addEventListener('click', function () {
+            periodOptions.forEach((opt) => opt.classList.remove('active'));
+            this.classList.add('active');
+            periodText.textContent = this.getAttribute('data-period');
+            chartPeriodDropdown.classList.remove('open');
+            chartPeriodBtn.classList.remove('open');
+          });
+        });
+      }
+
+      // Function to update notification badge and bell icon color
+      function updateNotificationState() {
+        const unreadCount = document.querySelectorAll('.notification-item.unread').length;
+        const badge = document.querySelector('.notification-badge');
+        const bellSvg = notificationsBtn.querySelector('path');
+
+        badge.textContent = unreadCount;
+
+        if (unreadCount === 0) {
+          badge.style.display = 'none';
+          // Make bell icon gray with opacity when no unread notifications
+          if (bellSvg) {
+            bellSvg.setAttribute('fill', '#646464');
+            bellSvg.setAttribute('fill-opacity', '0.41');
+          }
+        } else {
+          badge.style.display = 'flex';
+          // Make bell icon blue when there are unread notifications
+          if (bellSvg) {
+            bellSvg.setAttribute('fill', '#0284FD');
+            bellSvg.setAttribute('fill-opacity', '1');
+          }
+        }
+      }
+
+      // Variable to track unread emails count (you can modify this based on your data)
+      let unreadEmailsCount = 2;
+
+      // Function to update email icon color
+      function updateEmailState() {
+        const emailBadge = document.querySelector('.email-badge');
+        const emailSvg = emailBtn.querySelector('svg path');
+
+        if (emailBadge) {
+          emailBadge.textContent = unreadEmailsCount;
+        }
+
+        if (unreadEmailsCount === 0) {
+          if (emailBadge) {
+            emailBadge.style.display = 'none';
+          }
+          // Make email icon gray with opacity when no unread emails
+          if (emailSvg) {
+            emailSvg.setAttribute('fill', '#646464');
+            emailSvg.setAttribute('fill-opacity', '0.41');
+          }
+        } else {
+          if (emailBadge) {
+            emailBadge.style.display = 'inline-block';
+          }
+          // Make email icon blue when there are unread emails
+          if (emailSvg) {
+            emailSvg.setAttribute('fill', '#0284FD');
+            emailSvg.setAttribute('fill-opacity', '1');
+          }
+        }
+      }
+
+      // Email click handler to mark emails as read
+      emailBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Mark all emails as read
+        unreadEmailsCount = 0;
+        updateEmailState();
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', (event) => {
+        // Don't close calendar if clicking inside it
+        if (!event.target.closest('.calendar-wrapper') && !event.target.closest('#toggleCalendar')) {
+          closeAllDropdowns();
+          const calendarWrapper = document.getElementById('calendarWrapper');
+          if (calendarWrapper) {
+            calendarWrapper.classList.remove('show');
+          }
+        } else if (!event.target.closest('.chart-period-dropdown') && !event.target.closest('#chartPeriodBtn')) {
+          closeAllDropdowns();
+        }
+      });
+
+      // Prevent dropdown clicks from closing themselves
+      langDropdown.addEventListener('click', (e) => e.stopPropagation());
+      notificationsDropdown.addEventListener('click', (e) => e.stopPropagation());
+      profileDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+      // Handle notification item clicks
+      document.querySelectorAll('.notification-item').forEach((item) => {
+        item.addEventListener('click', () => {
+          item.classList.remove('unread');
+          updateNotificationState();
+        });
+      });
+
+      // Initialize notification and email states on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        updateNotificationState();
+        updateEmailState();
+        initChartPeriodDropdown();
+        initCoursesSortDropdown();
+      });
+
+      // Custom chart animation
+      document.addEventListener('DOMContentLoaded', () => {
+        const chartPaths = document.querySelectorAll('.chart-path');
+
+        chartPaths.forEach((path, index) => {
+          // Add animation delay for staggered effect
+          path.style.animationDelay = `${index * 0.5}s`;
+        });
+      });
+
+      // Add Tariff Modal functionality
+      const addTariffModal = document.getElementById('addTariffModal');
+      const closeTariffModal = document.getElementById('closeTariffModal');
+      const createContentBtnTariff = document.getElementById('createContentBtnTariff');
+
+      // Tariff modal functions
+      function showAddTariffModal() {
+        addTariffModal.classList.add('show');
+        document.body.classList.add('modal-open');
+
+        // Hide elements
+        if (manageCalendar) manageCalendar.style.display = 'none';
+        if (infoItems) infoItems.style.display = 'none';
+        if (chartSection) chartSection.style.display = 'none';
+      }
+      function hideAddTariffModal() {
+        addTariffModal.classList.remove('show');
+        document.body.classList.remove('modal-open');
+
+        // Check if we should return to redactor or dashboard
+        const redactor = document.querySelector('.redactor');
+        const isRedactorVisible = redactor && redactor.style.display === 'block';
+
+        if (isRedactorVisible) {
+          // If redactor is visible, don't show dashboard elements
+          console.log('Returning to redactor after tariff modal close');
+        } else {
+          // Show dashboard elements back only if not in redactor
+          if (manageCalendar) manageCalendar.style.display = 'flex';
+          if (infoItems) infoItems.style.display = 'flex';
+          if (chartSection) chartSection.style.display = 'block';
+        }
+      }
+
+      // Close tariff modal handlers
+      closeTariffModal.addEventListener('click', hideAddTariffModal);
+      // Create content button handler for tariff modal
+      createContentBtnTariff.addEventListener('click', () => {
+        // Handle the final creation logic here
+        console.log('Creating content with tariff settings');
+        hideAddTariffModal();
+      });
+      // Close modal when clicking outside
+      addTariffModal.addEventListener('click', (e) => {
+        if (e.target === addTariffModal) {
+          hideAddTariffModal();
+        }
+      });
+      // Tariff tabs functionality
+      const tariffTabs = document.querySelectorAll('.tariff-tab');
+      tariffTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tariffTabs.forEach((t) => t.classList.remove('active'));
+          tab.classList.add('active');
+        });
+      });
+      // Payment type buttons functionality
+      const paymentBtns = document.querySelectorAll('.payment-btn');
+      paymentBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          paymentBtns.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+      // Currency selector functionality
+      const currencyBtn = document.getElementById('currencyBtn');
+      const currencyDropdown = document.getElementById('currencyDropdown');
+      const currencyText = document.querySelector('.currency-text');
+      const currencyOptions = document.querySelectorAll('.currency-option');
+      if (currencyBtn && currencyDropdown) {
+        currencyBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          currencyDropdown.classList.toggle('show');
+        });
+        currencyOptions.forEach((option) => {
+          option.addEventListener('click', () => {
+            const currency = option.getAttribute('data-currency');
+            const text = option.textContent.trim();
+            // Update display
+            currencyText.textContent = text;
+            // Update active state
+            currencyOptions.forEach((opt) => opt.classList.remove('active'));
+            option.classList.add('active');
+            // Close dropdown
+            currencyDropdown.classList.remove('show');
+          });
+        });
+        // Close currency dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.currency-select')) {
+            currencyDropdown.classList.remove('show');
+          }
+        });
+      }
+      // Courses sort dropdown functionality
+      function initCoursesSortDropdown() {
+        const coursesSortBtn = document.getElementById('coursesSortBtn');
+        const coursesSortDropdown = document.getElementById('coursesSortDropdown');
+        const sortText = document.querySelector('.sort-text');
+        if (!coursesSortBtn || !coursesSortDropdown || !sortText) return;
+        const sortOptions = coursesSortDropdown.querySelectorAll('.sort-option');
+        coursesSortBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          closeAllDropdowns();
+          coursesSortDropdown.classList.toggle('show');
+          coursesSortBtn.classList.toggle('open');
+        });
+        sortOptions.forEach(option => {
+          option.addEventListener('click', function () {
+            sortOptions.forEach(opt => opt.classList.remove('active'));
+            this.classList.add('active');
+            sortText.textContent = this.textContent;
+            coursesSortDropdown.classList.remove('show');
+            coursesSortBtn.classList.remove('open');
+            // Here you can add logic to actually sort the courses
+            const sortType = this.getAttribute('data-sort');
+            console.log('Sorting courses by:', sortType);
+          });
+        });
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.courses__sort-dropdown')) {
+            coursesSortDropdown.classList.remove('show');
+            coursesSortBtn.classList.remove('open');
+          }
+        });
+      }
+      // View switching functionality
+      function showCoursesSection() {
+        console.log('Switching to courses view');
+        // Hide info items and chart section
+        const currentInfoItems = document.getElementById('infoItems');
+        const currentChartSection = document.getElementById('chartSection');
+        const currentCoursesSection = document.querySelector('.courses');
+        // Hide calendar and trial period elements
+        const currentManageCalendar = document.querySelector('.manage__calendar');
+        const currentManageTrial = document.querySelector('.manage__trial');
+        // Show courses sort dropdown
+        const coursesSortContainer = document.getElementById('coursesSortContainer');
+        // Add courses-view class to manage__inner to make buttons compact
+        const manageInner = document.querySelector('.manage__inner');
+        if (currentInfoItems) currentInfoItems.style.display = 'none';
+        if (currentChartSection) currentChartSection.style.display = 'none';
+        if (currentManageCalendar) currentManageCalendar.style.display = 'none';
+        if (currentManageTrial) currentManageTrial.style.display = 'none';
+        if (currentCoursesSection) currentCoursesSection.style.display = 'block';
+        if (coursesSortContainer) coursesSortContainer.style.display = 'block';
+        if (manageInner) manageInner.classList.add('courses-view');
+        // Make sure courses are visible and redactor is hidden
+        const redactor = document.querySelector('.redactor');
+        if (redactor) redactor.style.display = 'none';
+      }
+      // Initialize view switching functionality after DOM loads
+      function initViewSwitching() {
+        console.log('Initializing view switching');
+        // Re-get elements to ensure they exist
+        const channelBtn = document.getElementById('createChannelBtn');
+        const dashboardLink = document.querySelector('a[href="#dashboard"]');
+        const logoLink = document.querySelector('.logo');
+        // Add click event listener to the "Создать канал трансляции" button
+        if (channelBtn) {
+          console.log('Found create channel button, adding listener');
+          // Remove any existing listeners by cloning
+          const newChannelBtn = channelBtn.cloneNode(true);
+          channelBtn.parentNode.replaceChild(newChannelBtn, channelBtn);
+          // Add fresh listener
+          newChannelBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Channel button clicked - final handler');
+            // Get current elements
+            const infoItems = document.getElementById('infoItems');
+            const chartSection = document.getElementById('chartSection');
+            const coursesSection = document.querySelector('.courses');
+            const manageCalendar = document.querySelector('.manage__calendar');
+            const manageTrial = document.querySelector('.manage__trial');
+            const coursesSortContainer = document.getElementById('coursesSortContainer');
+            const manageInner = document.querySelector('.manage__inner');
+            // Hide info, chart, calendar and trial, show courses and sort dropdown
+            if (infoItems) infoItems.style.display = 'none';
+            if (chartSection) chartSection.style.display = 'none';
+            if (manageCalendar) manageCalendar.style.display = 'none';
+            if (manageTrial) manageTrial.style.display = 'none';
+            if (coursesSection) coursesSection.style.display = 'block';
+            if (coursesSortContainer) coursesSortContainer.style.display = 'block';
+            if (manageInner) manageInner.classList.add('courses-view');
+          });
+        } else {
+          console.log('Create channel button not found');
+        }
+        // Re-check calendar button
+        const calendarApplyBtn = document.getElementById('applyRange');
+        if (calendarApplyBtn) {
+          console.log('Calendar apply button found in final check');
+        } else {
+          console.log('Calendar apply button still not found');
+        }
+      }
+      // Run initialization after a small delay to ensure all elements are ready
+      setTimeout(initViewSwitching, 100);
+      // Course item click handlers functionality
+      function initCourseItemClickHandlers() {
+        const courseItems = document.querySelectorAll('.courses__item')
+        const redactor = document.querySelector('.redactor')
+        const redactorTitle = document.querySelector('.redactor__title')
+        const redactorBack = document.querySelector('.redactor__back')
+        console.log('Initializing course item click handlers...')
+        console.log('Found', courseItems.length, 'course items')
+        // Add click event to each course item
+        courseItems.forEach((courseItem, index) => {
+          courseItem.addEventListener('click', function (e) {
+            e.preventDefault()
+            e.stopPropagation()
+            console.log('Course item', index, 'clicked')
+            // Get course title from the clicked item
+            const courseTitle = this.querySelector('.courses__title')
+            const courseTitleText = courseTitle ? courseTitle.textContent.trim() : 'Курс'
+            console.log('Course title:', courseTitleText)
+            // Update redactor title
+            if (redactorTitle) {
+              redactorTitle.textContent = courseTitleText
+            }
+            // Show redactor and hide other sections
+            showRedactorView()
+          })
+        })
+        // Add click event to back button
+        if (redactorBack) {
+          redactorBack.addEventListener('click', function (e) {
+            e.preventDefault()
+            console.log('Back button clicked')
+            hideRedactorView()
+          })
+        }
+      }
+      // Function to show redactor and hide other sections
+      function showRedactorView() {
+        const redactor = document.querySelector('.redactor')
+        const infoItems = document.getElementById('infoItems')
+        const chartSection = document.getElementById('chartSection')
+        const coursesSection = document.querySelector('.courses')
+        const manageSection = document.querySelector('.manage')
+        const coursesSortContainer = document.getElementById('coursesSortContainer')
+        console.log('Showing redactor view')
+        // Hide all main sections
+        if (infoItems) {
+          infoItems.style.display = 'none'
+          console.log('Info items hidden')
+        }
+        if (chartSection) {
+          chartSection.style.display = 'none'
+          console.log('Chart section hidden')
+        }
+        if (coursesSection) {
+          coursesSection.style.display = 'none'
+          console.log('Courses section hidden')
+        }
+        if (manageSection) {
+          manageSection.style.display = 'none'
+          console.log('Manage section hidden')
+        }
+        if (coursesSortContainer) {
+          coursesSortContainer.style.display = 'none'
+          console.log('Courses sort container hidden')
+        }
+        // Show redactor
+        if (redactor) {
+          redactor.style.display = 'block'
+          console.log('Redactor shown')
+        }
+      }
+      // Function to hide redactor and show main dashboard sections
+      function hideRedactorView() {
+        const redactor = document.querySelector('.redactor')
+        const infoItems = document.getElementById('infoItems')
+        const chartSection = document.getElementById('chartSection')
+        const coursesSection = document.querySelector('.courses')
+        const manageSection = document.querySelector('.manage')
+        const coursesSortContainer = document.getElementById('coursesSortContainer')
+        const manageInner = document.querySelector('.manage__inner')
+        console.log('Hiding redactor view')
+        // Show dashboard sections back (NOT courses)
+        if (infoItems) {
+          infoItems.style.display = 'flex'
+          console.log('Info items shown')
+        }
+        if (chartSection) {
+          chartSection.style.display = 'block'
+          console.log('Chart section shown')
+        }
+        if (manageSection) {
+          manageSection.style.display = 'block'
+          console.log('Manage section shown')
+        }
+        // Hide courses and related elements (return to dashboard, not courses)
+        if (coursesSection) {
+          coursesSection.style.display = 'none'
+          console.log('Courses section hidden')
+        }
+        if (coursesSortContainer) {
+          coursesSortContainer.style.display = 'none'
+          console.log('Courses sort container hidden')
+        }
+        if (manageInner) {
+          manageInner.classList.remove('courses-view')
+          console.log('Removed courses-view class')
+        }
+        // Hide redactor
+        if (redactor) {
+          redactor.style.display = 'none'
+          console.log('Redactor hidden')
+        }
+      }
+    </script>
+    <script src="./js/main.js"></script>
+    <script src="./js/existing-tariffs.js"></script>
+    <!-- Final initialization script -->
+    <script>
+      // Final initialization after all scripts have loaded
+      document.addEventListener('DOMContentLoaded', function () {
+        // Wait a bit more for everything to be ready
+        setTimeout(function () {
+          console.log('Final initialization...');
+          // Initialize course item click handlers
+          initCourseItemClickHandlers();
+          // Re-initialize view switching
+          const finalChannelBtn = document.getElementById('createChannelBtn');
+          if (finalChannelBtn) {
+            console.log('Re-adding create channel button listener');
+            // Remove any existing listeners by cloning
+            const newChannelBtn = finalChannelBtn.cloneNode(true);
+            finalChannelBtn.parentNode.replaceChild(newChannelBtn, finalChannelBtn);
+            // Add fresh listener
+            newChannelBtn.addEventListener('click', function (e) {
+              e.preventDefault();
+              console.log('Channel button clicked - final handler');
+              // Get current elements
+              const infoItems = document.getElementById('infoItems');
+              const chartSection = document.getElementById('chartSection');
+              const coursesSection = document.querySelector('.courses');
+              const manageCalendar = document.querySelector('.manage__calendar');
+              const manageTrial = document.querySelector('.manage__trial');
+              const coursesSortContainer = document.getElementById('coursesSortContainer');
+              const manageInner = document.querySelector('.manage__inner');
+              // Hide info, chart, calendar and trial, show courses and sort dropdown
+              if (infoItems) infoItems.style.display = 'none';
+              if (chartSection) chartSection.style.display = 'none';
+              if (manageCalendar) manageCalendar.style.display = 'none';
+              if (manageTrial) manageTrial.style.display = 'none';
+              if (coursesSection) coursesSection.style.display = 'block';
+              if (coursesSortContainer) coursesSortContainer.style.display = 'block';
+              if (manageInner) manageInner.classList.add('courses-view');
+            });
+          }
+          // Re-check calendar button
+          const calendarApplyBtn = document.getElementById('applyRange');
+          if (calendarApplyBtn) {
+            console.log('Calendar apply button found in final check');
+          } else {
+            console.log('Calendar apply button still not found');
+          }
+        }, 500);
+      });
+    </script>
+  </main>
+</body>
+
+</html>
