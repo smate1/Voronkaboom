@@ -444,6 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	initNavigationHandlers()
 	initRedactorTabs()
 	initMassageHandlers()
+	initMenuAddClick()
 })
 
 // Function to initialize redactor tabs
@@ -1124,4 +1125,66 @@ function applyTextFormatting(textarea, formatType) {
 	// Trigger input event to notify of changes
 	const inputEvent = new Event('input', { bubbles: true })
 	textarea.dispatchEvent(inputEvent)
+}
+
+// Function to initialize menu-add click functionality
+function initMenuAddClick() {
+	console.log('Initializing menu-add click functionality')
+
+	// Get all course items with menu buttons
+	const courseItems = document.querySelectorAll('.courses__item')
+
+	courseItems.forEach((courseItem, index) => {
+		const btnContainer = courseItem.querySelector('.courses__btn-container')
+		const menuBtn = courseItem.querySelector('.courses__btn')
+		const menuAdd = courseItem.querySelector('.menu-add')
+
+		if (btnContainer && menuBtn && menuAdd) {
+			// Add click event to menu button
+			menuBtn.addEventListener('click', function (e) {
+				e.preventDefault()
+				e.stopPropagation()
+
+				console.log(`Menu button ${index} clicked`)
+
+				// Close all other open menus first
+				document
+					.querySelectorAll('.courses__btn-container.menu-open')
+					.forEach(container => {
+						if (container !== btnContainer) {
+							container.classList.remove('menu-open')
+						}
+					})
+
+				// Toggle current menu
+				btnContainer.classList.toggle('menu-open')
+
+				// Log current state
+				if (btnContainer.classList.contains('menu-open')) {
+					console.log(`Menu ${index} opened`)
+				} else {
+					console.log(`Menu ${index} closed`)
+				}
+			})
+
+			// Prevent course item click when clicking on menu button
+			btnContainer.addEventListener('click', function (e) {
+				e.stopPropagation()
+			})
+		}
+	})
+
+	// Close menus when clicking outside
+	document.addEventListener('click', function (e) {
+		// Check if click is outside all menu containers
+		if (!e.target.closest('.courses__btn-container')) {
+			document
+				.querySelectorAll('.courses__btn-container.menu-open')
+				.forEach(container => {
+					container.classList.remove('menu-open')
+				})
+		}
+	})
+
+	console.log('Menu-add click functionality initialized')
 }

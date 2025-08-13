@@ -624,7 +624,6 @@ body {
 	line-height: 19.5px;
 	transition: all 0.3s;
 	height: 38px;
-	flex: 1;
 	justify-content: center;
 	min-width: 150px;
 	white-space: nowrap;
@@ -651,7 +650,6 @@ body {
 	padding: 10px 13px;
 	height: 38px;
 	transition: all 0.3s;
-	flex: 1;
 	min-width: 150px;
 	white-space: nowrap;
 }
@@ -667,8 +665,10 @@ body {
 	box-shadow: 0 2px 16px 0 rgba(114, 138, 150, 0.08);
 	display: flex;
 	align-items: center;
-	padding: 13px 16px;
+	padding: 10px 16px;
 	gap: 30px;
+	flex: 1;
+	justify-content: space-between;
 }
 
 .manage__trial-left {
@@ -2237,7 +2237,7 @@ body.modal-open {
 	height: 60px;
 	background: rgba(255, 255, 255, 0.11);
 }
-.courses__btn-container:hover .menu-add {
+.courses__btn-container.menu-open .menu-add {
 	display: block !important;
 }
 
@@ -2758,6 +2758,7 @@ body.modal-open {
 	line-height: normal;
 
 }
+
 
 /* =================================== */
 /* МОБІЛЬНА АДАПТИВНІСТЬ - VORONKABOOM */
@@ -3297,5 +3298,3 @@ body.modal-open {
     transform: scale(1.05);
   }
 }
-
- 
