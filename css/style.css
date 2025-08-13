@@ -2924,12 +2924,19 @@ body.mobile-menu-open {
   .header__description {
     font-size: 12px;
   }
-
+.info__item:nth-child(3) {
+	background-size: cover;
+}
   /* Зменшуємо відступи в хедері */
   .header__right {
     gap: 5px;
   }
-
+	.calendar-cancel-btn,
+	.calendar-apply-btn{
+		font-size: 12px !important;
+		text-align: center;
+		padding: 10px 20px !important;
+	}
   .header__email {
     margin-right: 15px;
   }
@@ -2958,7 +2965,9 @@ body.mobile-menu-open {
     width: calc(100vw - 30px);
     max-width: 300px;
   }
-
+.lang-dropdown{
+	right: 50px;
+}
   /* Мобільні стилі для сайдбару */
   .sidebar__nav {
     margin: 30px 20px;
