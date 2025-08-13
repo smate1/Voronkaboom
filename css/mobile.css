@@ -184,7 +184,7 @@
   }
 
   .redactor__title {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.2;
   }
 }
@@ -677,5 +677,368 @@
   .calendar-wrapper {
     max-height: calc(100vh - 40px);
     overflow-y: auto;
+  }
+}
+
+/* ================================================
+   АДАПТИВНІ СТИЛІ ДЛЯ БЛОКУ MASSAGE (ПОВІДОМЛЕННЯ)
+   ================================================ */
+
+/* Загальні адаптивні стилі для планшетів */
+@media (max-width: 1024px) {
+  .massage {
+    padding: 25px 20px;
+  }
+
+  .massage__main {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .massage__steps {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .massage__textarea {
+    height: 200px;
+  }
+
+  .massage__settings {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .massage__settings-right {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+  .massage {
+    padding: 20px 15px;
+  }
+
+  .massage__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .massage__right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .massage__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .massage__main {
+    padding: 20px 15px;
+    border-radius: 12px;
+    gap: 25px;
+  }
+
+  .massage__textarea {
+    height: 180px;
+    font-size: 14px;
+    padding: 15px 18px;
+  }
+
+  .massage__input {
+    padding: 14px 16px;
+    font-size: 16px; /* Запобігання zoom на iOS */
+    margin-bottom: 25px;
+  }
+
+  .massage__correct {
+    gap: 15px;
+    padding: 15px 18px;
+  }
+
+  .massage__include {
+    gap: 12px;
+    padding: 12px 15px;
+  }
+
+  .massage__text {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .massage__add {
+    align-self: stretch;
+    justify-content: center;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .massage__settings-left {
+    width: 100%;
+  }
+
+  .massage__checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .massage__checkbox label {
+    font-size: 16px;
+  }
+
+  .massage__info {
+
+    gap: 8px;
+  }
+
+  .massage__settings-description {
+    text-align: left;
+  }
+
+  .massage__steps {
+    height: auto;
+    min-height: 160px;
+    padding: 18px 15px;
+    margin-top: 0;
+  }
+
+  .massage__top {
+    gap: 15px;
+  }
+
+  .massage__text {
+    font-size: 16px;
+  }
+
+  .massage__btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    align-self: flex-end;
+  }
+
+  .massage__steps-info {
+    padding: 12px 15px;
+  }
+
+  .massage__info-steps--text {
+    font-size: 16px;
+  }
+
+  /* Кнопки в header */
+  .massage__save,
+  .massage__eye {
+    min-width: 44px;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .massage__save {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Адаптивні стилі для маленьких мобільних екранів */
+@media (max-width: 480px) {
+  .massage {
+    padding: 15px 10px;
+  }
+
+  .massage__header {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .massage__title {
+    font-size: 20px;
+  }
+
+  .massage__main {
+    padding: 15px 12px;
+    gap: 20px;
+  }
+
+  .massage__input {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+  }
+
+  .massage__textarea {
+    height: 160px;
+    padding: 12px 15px;
+  }
+
+  .massage__correct {
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .massage__include {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .massage__text {
+    font-size: 13px;
+  }
+
+  .massage__add {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .massage__settings-text {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .massage__checkbox label {
+    font-size: 15px;
+  }
+
+  .massage__checkbox label::before {
+    width: 45px;
+    height: 25px;
+  }
+
+  .massage__checkbox label::after {
+    width: 21px;
+    height: 21px;
+  }
+
+  .massage__checkbox input[type='checkbox']:checked + label::after {
+    transform: translateY(-50%) translateX(20px);
+  }
+
+  .massage__info-text {
+    font-size: 15px;
+  }
+
+  .massage__settings-description {
+    font-size: 13px;
+  }
+
+  .massage__steps {
+    padding: 15px 12px;
+    min-height: 140px;
+  }
+
+  .massage__top {
+    gap: 12px;
+  }
+
+  .massage__text {
+    font-size: 15px;
+  }
+
+  .massage__btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .massage__steps-info {
+    padding: 10px 12px;
+  }
+
+  .massage__info-steps--text {
+    font-size: 15px;
+  }
+
+  .massage__save {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Кнопки в header залишаються в одному рядку */
+  .massage__right {
+    gap: 10px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .massage__save {
+    flex: 1;
+    max-width: calc(100% - 60px); /* Залишаємо місце для кнопки ока */
+  }
+
+  .massage__eye {
+    width: 50px;
+    flex-shrink: 0;
+  }
+}
+
+/* Ландшафтна орієнтація для мобільних */
+@media (max-width: 768px) and (orientation: landscape) {
+  .massage__header {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .massage__right {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .massage__main {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .massage__content {
+    flex: 2;
+  }
+
+  .massage__steps {
+    flex: 1;
+    max-width: 300px;
+  }
+
+  .massage__textarea {
+    height: 120px;
+  }
+}
+
+/* Утиліти для блоку massage */
+@media (max-width: 768px) {
+  /* Заборона zoom при focus на input на iOS */
+  .massage__input,
+  .massage__textarea {
+    font-size: 16px !important;
+    transform: translateZ(0);
+  }
+
+  /* Поліпшення прокрутки */
+  .massage__textarea {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Заборона виділення тексту для touch елементів */
+  .massage__save,
+  .massage__eye,
+  .massage__back,
+  .massage__add,
+  .massage__btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Заборона zoom сторінки при подвійному дотику */
+  .massage * {
+    touch-action: manipulation;
   }
 }
