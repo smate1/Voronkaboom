@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
   <title>Voronkaboom</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,9 +12,23 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/mobile.css" />
 </head>
 
 <body>
+  <!-- Мобільна кнопка меню -->
+  <button class="sidebar__toggle" id="sidebarToggle" aria-label="Відкрити меню">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Overlay для мобільного меню -->
+  <div class="sidebar__overlay" id="sidebarOverlay"></div>
+
   <main class="main">
     <aside class="sidebar">
       <a class="logo" href="./index.html">
@@ -1130,7 +1144,8 @@
                 <path
                   d="M0 14V0H5.56098C6.63415 0 7.56504 0.35 8.35366 1.05C9.14228 1.75 9.53658 2.63333 9.53658 3.7C9.53658 4.33333 9.36585 4.91667 9.02439 5.45C8.68293 5.98333 8.22764 6.39167 7.65854 6.675V6.825C8.35772 7.05833 8.92276 7.475 9.35366 8.075C9.78455 8.675 10 9.35 10 10.1C10 11.2333 9.57317 12.1667 8.71951 12.9C7.86585 13.6333 6.86992 14 5.73171 14H0ZM2.09756 5.925H5.41463C5.98374 5.925 6.47561 5.73333 6.89024 5.35C7.30488 4.96667 7.5122 4.48333 7.5122 3.9C7.5122 3.31667 7.30488 2.82917 6.89024 2.4375C6.47561 2.04583 5.98374 1.85 5.41463 1.85H2.09756V5.925ZM2.09756 12.1H5.60976C6.22764 12.1 6.76423 11.8917 7.21951 11.475C7.6748 11.0583 7.90244 10.5333 7.90244 9.9C7.90244 9.28333 7.6748 8.76667 7.21951 8.35C6.76423 7.93333 6.22764 7.725 5.60976 7.725H2.09756V12.1Z"
                   fill="black" />
-                <path d="M24 14V11.8125H26.9357L30.75 2.1875H27.4286V0H36V2.1875H33.0643L29.25 11.8125H32.5714V14H24Z" fill="black" />
+                <path d="M24 14V11.8125H26.9357L30.75 2.1875H27.4286V0H36V2.1875H33.0643L29.25 11.8125H32.5714V14H24Z"
+                  fill="black" />
                 <path
                   d="M50 15V13.75H62V15H50ZM56 11.6667C54.5571 11.6667 53.3393 11.1875 52.3464 10.2292C51.3536 9.27083 50.8571 8.09722 50.8571 6.70833V0H52.5714V6.75C52.5714 7.66667 52.9 8.4375 53.5571 9.0625C54.2143 9.6875 55.0286 10 56 10C56.9714 10 57.7857 9.6875 58.4429 9.0625C59.1 8.4375 59.4286 7.66667 59.4286 6.75V0H61.1429V6.70833C61.1429 8.09722 60.6464 9.27083 59.6536 10.2292C58.6607 11.1875 57.4429 11.6667 56 11.6667Z"
                   fill="black" />
@@ -2076,6 +2091,122 @@
             console.log('Calendar apply button still not found');
           }
         }, 500);
+      });
+    </script>
+
+    <!-- Мобільне меню JavaScript -->
+    <script>
+      // Мобільне меню функціональність
+      document.addEventListener('DOMContentLoaded', function () {
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const body = document.body;
+
+        // Функція для відкриття мобільного меню
+        function openMobileMenu() {
+          sidebar.classList.add('active');
+          sidebarOverlay.classList.add('active');
+          body.classList.add('mobile-menu-open');
+        }
+
+        // Функція для закриття мобільного меню
+        function closeMobileMenu() {
+          sidebar.classList.remove('active');
+          sidebarOverlay.classList.remove('active');
+          body.classList.remove('mobile-menu-open');
+        }
+
+        // Обробник кліку на кнопку бургер
+        if (sidebarToggle) {
+          sidebarToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (sidebar.classList.contains('active')) {
+              closeMobileMenu();
+            } else {
+              openMobileMenu();
+            }
+          });
+        }
+
+        // Обробник кліку на overlay
+        if (sidebarOverlay) {
+          sidebarOverlay.addEventListener('click', function () {
+            closeMobileMenu();
+          });
+        }
+
+        // Закрити меню при кліку на посилання в сайдбарі (на мобільних)
+        const sidebarLinks = sidebar.querySelectorAll('.sidebar__link, .sidebar__sublink');
+        sidebarLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 768) {
+              closeMobileMenu();
+            }
+          });
+        });
+
+        // Закрити меню при зміні розміру екрану (якщо перейшли на десктоп)
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) {
+            closeMobileMenu();
+          }
+        });
+
+        // Закрити меню при натисканні Escape
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Забороняємо скрол сторінки при відкритому меню
+        function preventScroll(e) {
+          if (body.classList.contains('mobile-menu-open')) {
+            e.preventDefault();
+          }
+        }
+
+        // Додаємо/видаляємо обробники для забороны скролу
+        document.addEventListener('touchmove', preventScroll, { passive: false });
+      });
+
+      // Покращена адаптивність для дропдаунів
+      document.addEventListener('DOMContentLoaded', function () {
+        // Адаптивне позиціонування дропдаунів
+        function adjustDropdownPosition(dropdown, trigger) {
+          if (!dropdown || !trigger) return;
+
+          const rect = trigger.getBoundingClientRect();
+          const dropdownRect = dropdown.getBoundingClientRect();
+          const viewportWidth = window.innerWidth;
+          const viewportHeight = window.innerHeight;
+
+          // Якщо дропдаун виходить за межі екрану справа
+          if (rect.right + dropdownRect.width > viewportWidth) {
+            dropdown.style.left = 'auto';
+            dropdown.style.right = '0';
+          }
+
+          // Якщо дропдаун виходить за межі екрану знизу
+          if (rect.bottom + dropdownRect.height > viewportHeight) {
+            dropdown.style.top = 'auto';
+            dropdown.style.bottom = '100%';
+          }
+        }
+
+        // Застосовуємо до всіх дропдаунів
+        const dropdowns = document.querySelectorAll('.lang-dropdown, .notifications-dropdown, .profile-dropdown, .calendar-wrapper');
+        dropdowns.forEach(dropdown => {
+          const trigger = dropdown.previousElementSibling || dropdown.parentElement.querySelector('button');
+          if (trigger) {
+            trigger.addEventListener('click', () => {
+              setTimeout(() => adjustDropdownPosition(dropdown, trigger), 10);
+            });
+          }
+        });
       });
     </script>
   </main>
