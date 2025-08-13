@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	initNavigationHandlers()
 	initRedactorTabs()
 	initMassageHandlers()
-	initMenuAddClick()
+	initCoursesMenuButtons()
 })
 
 // Function to initialize redactor tabs
@@ -1125,6 +1125,71 @@ function applyTextFormatting(textarea, formatType) {
 	// Trigger input event to notify of changes
 	const inputEvent = new Event('input', { bubbles: true })
 	textarea.dispatchEvent(inputEvent)
+}
+
+// Function to initialize courses menu buttons
+function initCoursesMenuButtons() {
+	console.log('Initializing courses menu buttons...')
+
+	// Get all courses buttons
+	const coursesButtons = document.querySelectorAll('.courses__btn')
+
+	console.log('Found', coursesButtons.length, 'courses buttons')
+
+	coursesButtons.forEach((button, index) => {
+		// Find the corresponding menu-add element and button container for this button
+		const courseItem = button.closest('.courses__item')
+		const buttonContainer = button.closest('.courses__btn-container')
+		const menuAdd = courseItem ? courseItem.querySelector('.menu-add') : null
+
+		if (menuAdd && buttonContainer) {
+			console.log('Setting up button', index, 'with menu')
+
+			// Add click event listener
+			button.addEventListener('click', function (e) {
+				e.preventDefault()
+				e.stopPropagation()
+
+				console.log('Courses button', index, 'clicked')
+
+				// Close all other menus first
+				const allButtonContainers = document.querySelectorAll(
+					'.courses__btn-container'
+				)
+				allButtonContainers.forEach(container => {
+					if (container !== buttonContainer) {
+						container.classList.remove('menu-open')
+					}
+				})
+
+				// Toggle the current menu
+				buttonContainer.classList.toggle('menu-open')
+
+				// Log the state
+				console.log(
+					'Menu is now',
+					buttonContainer.classList.contains('menu-open') ? 'visible' : 'hidden'
+				)
+			})
+		} else {
+			console.log('No menu or container found for button', index)
+		}
+	})
+
+	// Close menus when clicking outside
+	document.addEventListener('click', function (e) {
+		// Check if the click is outside all course items
+		if (!e.target.closest('.courses__item')) {
+			const allButtonContainers = document.querySelectorAll(
+				'.courses__btn-container'
+			)
+			allButtonContainers.forEach(container => {
+				container.classList.remove('menu-open')
+			})
+		}
+	})
+
+	console.log('Courses menu buttons initialization complete')
 }
 
 // Function to initialize menu-add click functionality

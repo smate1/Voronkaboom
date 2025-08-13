@@ -2260,6 +2260,7 @@ body.modal-open {
 	display: flex;
 	align-items: center;
 	font-style: normal;
+	text-wrap: nowrap;
 	font-weight: 600;
 	line-height: var(--line-height-19_5, 19.5px); /* 162.5% */
 }
@@ -2855,6 +2856,10 @@ body.mobile-menu-open {
 /* МОБІЛЬНІ ПРИСТРОЇ (до 1075px) */
 /* ========================= */
 @media screen and (max-width: 1075px) {
+	.menu-add{
+		padding: 10px;
+		bottom: -50px;
+	}
   /* Показуємо кнопку бургер меню */
   .sidebar__toggle {
     display: flex;
@@ -2894,9 +2899,10 @@ body.mobile-menu-open {
 
   /* Хедер адаптація */
   .header {
-    padding: 0 15px 10px 15px;
+    padding: 10px 15px 10px 15px;
     min-height: 60px;
     display: flex;
+		justify-content: space-between;
     align-items: center;
     gap: 15px;
   }
@@ -2906,7 +2912,9 @@ body.mobile-menu-open {
   }
 
   .header__right {
+    flex: 1;
     flex-shrink: 0;
+		justify-content: space-between;
   }
 
   .header__greetings {
@@ -2990,7 +2998,7 @@ body.mobile-menu-open {
   }
 
   .header {
-    padding: 0 10px 8px 10px;
+    padding: 10px 10px 8px 10px;
     min-height: 55px;
     gap: 10px;
   }
